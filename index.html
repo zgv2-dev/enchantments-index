@@ -2294,7 +2294,9 @@
     box-sizing: content-box;
     border-radius: 7px;
     background: #e9eff7;
-    filter: brightness(.82) saturate(1.15) drop-shadow(0 1px 0 rgba(15, 23, 42, .12));
+    object-fit: contain;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 1px 0 rgba(15, 23, 42, .12));
   }
 
   .cat-button .cat-name {
@@ -2480,9 +2482,12 @@
     box-shadow: 0 1px 2px rgba(15, 23, 42, .08);
   }
 
-  .cat-badge svg {
+  .cat-badge svg,
+  .cat-badge img {
     width: 12px;
     height: 12px;
+    object-fit: contain;
+    image-rendering: pixelated;
   }
 
   .card-body {
@@ -2749,9 +2754,12 @@
     letter-spacing: .08em;
   }
 
-  .cat-chip svg {
+  .cat-chip svg,
+  .cat-chip img {
     width: 13px;
     height: 13px;
+    object-fit: contain;
+    image-rendering: pixelated;
   }
 
   .detail-name {
@@ -3896,7 +3904,7 @@
 
   .cat-button .cat-icon {
     background: #e8f2e6;
-    filter: brightness(.84) saturate(1.05) drop-shadow(0 1px 0 rgba(18, 32, 22, .12));
+    filter: drop-shadow(0 1px 0 rgba(18, 32, 22, .12));
   }
 
   .cat-button[aria-pressed="true"] {
@@ -4071,7 +4079,7 @@
 
   html[data-theme="night"] .cat-button .cat-icon {
     background: #18281c;
-    filter: brightness(1.08) saturate(1.08) drop-shadow(0 1px 0 rgba(0, 0, 0, .35));
+    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .35));
   }
 
   html[data-theme="night"] .cat-button[aria-pressed="true"] {
@@ -4491,15 +4499,15 @@
 
 <script>
   const CATEGORIES = [
-    { id: "all",     label: "All",     icon: "i-book",    color: "#c28bff" },
-    { id: "armor",   label: "Armor",   icon: "i-helmet",  color: "var(--cat-armor)" },
-    { id: "weapons", label: "Weapons", icon: "i-sword",   color: "var(--cat-weapons)" },
-    { id: "tools",   label: "Tools",   icon: "i-pickaxe", color: "var(--cat-tools)" },
-    { id: "ranged",  label: "Ranged",  icon: "i-bow",     color: "var(--cat-ranged)" },
-    { id: "trident", label: "Trident", icon: "i-trident", color: "var(--cat-trident)" },
-    { id: "fishing", label: "Fishing", icon: "i-fish",    color: "var(--cat-fishing)" },
-    { id: "utility", label: "Utility", icon: "i-anvil",   color: "var(--cat-utility)" },
-    { id: "curses",  label: "Curses",  icon: "i-skull",   color: "var(--cat-curses)" }
+    { id: "all",     label: "All",     icon: "i-book",    asset: "assets/category-icons/all.png",     color: "#c28bff" },
+    { id: "armor",   label: "Armor",   icon: "i-helmet",  asset: "assets/category-icons/armor.png",   color: "var(--cat-armor)" },
+    { id: "weapons", label: "Weapons", icon: "i-sword",   asset: "assets/category-icons/weapons.png", color: "var(--cat-weapons)" },
+    { id: "tools",   label: "Tools",   icon: "i-pickaxe", asset: "assets/category-icons/tools.png",   color: "var(--cat-tools)" },
+    { id: "ranged",  label: "Ranged",  icon: "i-bow",     asset: "assets/category-icons/ranged.png",  color: "var(--cat-ranged)" },
+    { id: "trident", label: "Trident", icon: "i-trident", asset: "assets/category-icons/trident.png", color: "var(--cat-trident)" },
+    { id: "fishing", label: "Fishing", icon: "i-fish",    asset: "assets/category-icons/fishing.png", color: "var(--cat-fishing)" },
+    { id: "utility", label: "Utility", icon: "i-anvil",   asset: "assets/category-icons/utility.png", color: "var(--cat-utility)" },
+    { id: "curses",  label: "Curses",  icon: "i-skull",   asset: "assets/category-icons/curses.png",  color: "var(--cat-curses)" }
   ];
 
   const CATEGORY = Object.fromEntries(CATEGORIES.map(c => [c.id, c]));
@@ -7139,7 +7147,7 @@
       <button type="button" class="cat-button" data-category="${cat.id}"
         style="--cat-color: ${cat.color}" aria-pressed="${state.category === cat.id}">
         <span class="cat-count" aria-hidden="true">${categoryCount(cat.id)}</span>
-        <svg class="cat-icon" aria-hidden="true" viewBox="0 0 16 16"><use href="#${cat.icon}"/></svg>
+        <img class="cat-icon" src="${cat.asset}" alt="" width="16" height="16" loading="eager" decoding="async">
         <span class="cat-name">${categoryLabel(cat.id)}</span>
       </button>
     `).join("");
@@ -7181,7 +7189,7 @@
         style="--cat-color: ${cat.color}" aria-label="${shownName}, ${t("maxLevel")} ${ROMAN[enchantment.maxLevel]}">
         <span class="book-wrap" aria-hidden="true">
           <img class="book-icon enchant-icon" src="assets/enchant-icons/${enchantment.id}.png" alt="" width="36" height="36" loading="lazy" decoding="async">
-          <span class="cat-badge"><svg viewBox="0 0 16 16"><use href="#${cat.icon}"/></svg></span>
+          <span class="cat-badge"><img class="cat-badge-icon" src="${cat.asset}" alt="" width="16" height="16" loading="lazy" decoding="async"></span>
         </span>
         <span class="card-body">
           <span class="card-head">
@@ -7252,7 +7260,7 @@
         </div>
         <div class="hero-copy">
           <span class="cat-chip" style="--cat-color: ${cat.color}">
-            <svg aria-hidden="true" viewBox="0 0 16 16"><use href="#${cat.icon}"/></svg>
+            <img class="cat-chip-icon" src="${cat.asset}" alt="" width="16" height="16" decoding="async">
             ${categoryLabel(cat.id)}
           </span>
           <h2 class="detail-name">${displayName(enchantment)}</h2>
