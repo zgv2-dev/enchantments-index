@@ -3074,6 +3074,73 @@
     gap: 8px;
   }
 
+  .header-shapeshift {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 2px;
+    color: var(--lab-muted);
+    font-family: var(--lab-ui);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .header-shapeshift:hover {
+    color: var(--lab-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .header-shapeshift svg {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+  }
+
+  .header-shapeshift:focus-visible,
+  .footer-shapeshift:focus-visible {
+    outline: 2px solid var(--lab-blue);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 1080px) {
+    .header-shapeshift {
+      display: none;
+    }
+  }
+
+  .footer {
+    flex-wrap: wrap;
+  }
+
+  .footer-shapeshift {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--lab-blue);
+    font-family: var(--lab-ui);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .footer-shapeshift:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .footer-shapeshift svg {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+  }
+
   .lang-switch {
     display: inline-flex;
     align-items: center;
@@ -3892,6 +3959,7 @@
     .seo-fallback-title { margin: 4px 0 8px; font-family: "Monocraft", monospace; font-size: 30px; line-height: 1.2; }
     .seo-fallback .seo-kicker { margin: 0; color: #2f7d32; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .seo-fallback > p { color: #4a5f50; }
+    .seo-fallback a { color: #2f7d32; }
     .seo-fallback ul { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; margin: 22px 0; padding: 0; list-style: none; }
     .seo-fallback li { padding: 10px 12px; border: 1px solid #e7eee5; border-radius: 10px; background: #f8fbf7; }
     .seo-fallback li strong { display: block; font-size: 13px; }
@@ -3904,6 +3972,7 @@
     <p class="seo-kicker">Minecraft field guide</p>
     <h2 class="seo-fallback-title" id="seo-fallback-title">The Enchantment Codex</h2>
     <p>All 43 Minecraft Java 26.3 enchantments, with maximum levels, categories, compatible items, and summaries. Enable JavaScript for search, filters, official translations, and the anvil order optimizer.</p>
+    <p>Also by ZGV2: <a href="https://shapeshift.mc.zgv2.dev/">Shapeshift — Minecraft shape generator</a>.</p>
     <ul>
       <li><strong>Aqua Affinity</strong> <span>Max level I · Armor</span><p>Break blocks at full speed underwater.</p></li>
       <li><strong>Bane of Arthropods</strong> <span>Max level V · Weapons</span><p>Extra damage against spiders and their kin.</p></li>
@@ -4046,6 +4115,10 @@
       </div>
     </div>
     <div class="header-controls">
+      <a class="header-shapeshift" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener" aria-label="Shapeshift — Minecraft shape generator" title="Shapeshift — Minecraft shape generator">
+        Shapeshift
+        <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+      </a>
       <div class="language-control">
         <svg class="language-globe" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
           <circle cx="8" cy="8" r="5.5"/>
@@ -4145,6 +4218,10 @@
 
   <footer class="footer">
     <span class="footer-credit">@ 2026 Enchantments index by ZGV2</span>
+    <a class="footer-shapeshift" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener" aria-label="Shapeshift — Minecraft shape generator" title="Shapeshift — Minecraft shape generator">
+      Shapeshift
+      <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
   </footer>
 
   <div class="detail-backdrop" id="detail-backdrop" hidden></div>
