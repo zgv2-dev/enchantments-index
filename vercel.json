@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/de", "destination": "/de/", "permanent": true },
+    { "source": "/fr", "destination": "/fr/", "permanent": true },
+    { "source": "/it", "destination": "/it/", "permanent": true },
+    { "source": "/es", "destination": "/es/", "permanent": true },
+    { "source": "/uk", "destination": "/uk/", "permanent": true },
+    { "source": "/zh-hans", "destination": "/zh-hans/", "permanent": true },
+    { "source": "/zh-hant", "destination": "/zh-hant/", "permanent": true },
+    { "source": "/ja", "destination": "/ja/", "permanent": true }
+  ]
+}
