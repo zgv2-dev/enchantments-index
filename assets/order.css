@@ -928,3 +928,12 @@ html[data-theme="night"] .order-existing-level {
   align-items: center;
   gap: 3px;
 }
+
+
+.order-prior-hint {
+  margin: 5px 0 0;
+  color: var(--lab-muted);
+  font-family: var(--lab-ui);
+  font-size: 8px;
+  line-height: 1.45;
+}

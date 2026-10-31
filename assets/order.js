@@ -52,9 +52,11 @@
       selectOne: "Select at least one enchantment.", limit: "Up to 10 enchantments",
       placeholder: "Choose an item and enchantments to find the cheapest order.",
       resultTitle: "Optimal order", totalCost: "Total cost", steps: "Steps",
-      combine: "Combine", with: "with", cost: "Cost", prior: "Prior work",
+      combine: "Combine", with: "with", cost: "Cost", prior: "Resulting prior work",
       completed: "Completed in", noSolution: "No solution found within the anvil's 39-level limit.",
       alreadyOptimal: "No anvil work needed.", close: "Close", book: "Enchanted book",
+      addAnotherExisting: "Add another existing enchantment…",
+      priorHint: "0 = fresh · 1 = 1 use · 3 = 2 uses · 7 = 3 · 15 = 4 · 31 = 5 (worst case). Penalty doubles after each anvil use.",
       finalItem: "Final item",
       startExisting: "Start with an already enchanted item",
       startExistingBook: "Start with an already enchanted book",
@@ -79,9 +81,11 @@
       selectOne: "Wähle mindestens eine Verzauberung.", limit: "Höchstens 10 Verzauberungen",
       placeholder: "Wähle einen Gegenstand und Verzauberungen, um die günstigste Reihenfolge zu finden.",
       resultTitle: "Optimale Reihenfolge", totalCost: "Gesamtkosten", steps: "Schritte",
-      combine: "Kombiniere", with: "mit", cost: "Kosten", prior: "Vorherige Zusatzkosten",
+      combine: "Kombiniere", with: "mit", cost: "Kosten", prior: "Resultierende Zusatzkosten",
       completed: "Gefunden in", noSolution: "Keine Lösung innerhalb des Ambosslimits von 39 Stufen gefunden.",
       alreadyOptimal: "Keine Ambossarbeit nötig.", close: "Schließen", book: "Verzaubertes Buch",
+      addAnotherExisting: "Weitere vorhandene Verzauberung hinzufügen…",
+      priorHint: "0 = frisch · 1 = 1 Nutzung · 3 = 2 Nutzungen · 7 = 3 · 15 = 4 · 31 = 5 (Worst Case). Der Zuschlag verdoppelt sich nach jeder Ambossnutzung.",
       finalItem: "Endergebnis",
       startExisting: "Mit bereits verzaubertem Gegenstand beginnen",
       startExistingBook: "Mit bereits verzaubertem Buch beginnen",
@@ -106,9 +110,11 @@
       selectOne: "Sélectionnez au moins un enchantement.", limit: "10 enchantements maximum",
       placeholder: "Choisissez un objet et des enchantements pour trouver l'ordre le moins coûteux.",
       resultTitle: "Ordre optimal", totalCost: "Coût total", steps: "Étapes",
-      combine: "Combinez", with: "avec", cost: "Coût", prior: "Pénalité de réparations antérieures",
+      combine: "Combinez", with: "avec", cost: "Coût", prior: "Pénalité résultante",
       completed: "Terminé en", noSolution: "Aucune solution trouvée dans la limite de 39 niveaux de l'enclume.",
       alreadyOptimal: "Aucun travail à l'enclume nécessaire.", close: "Fermer", book: "Livre enchanté",
+      addAnotherExisting: "Ajouter un autre enchantement existant…",
+      priorHint: "0 = neuf · 1 = 1 utilisation · 3 = 2 · 7 = 3 · 15 = 4 · 31 = 5 (pire cas). La pénalité double à chaque utilisation de l’enclume.",
       finalItem: "Objet final",
       startExisting: "Commencer avec un objet déjà enchanté",
       startExistingBook: "Commencer avec un livre déjà enchanté",
@@ -133,9 +139,11 @@
       selectOne: "Seleziona almeno un incantesimo.", limit: "Massimo 10 incantesimi",
       placeholder: "Scegli un oggetto e gli incantesimi per trovare l'ordine meno costoso.",
       resultTitle: "Ordine ottimale", totalCost: "Costo totale", steps: "Passaggi",
-      combine: "Unisci", with: "con", cost: "Costo", prior: "Penalità per il lavoro precedente",
+      combine: "Unisci", with: "con", cost: "Costo", prior: "Penalità risultante",
       completed: "Completato in", noSolution: "Nessuna soluzione trovata entro il limite di 39 livelli dell'incudine.",
       alreadyOptimal: "Nessun lavoro all'incudine necessario.", close: "Chiudi", book: "Libro incantato",
+      addAnotherExisting: "Aggiungi un altro incantesimo esistente…",
+      priorHint: "0 = nuovo · 1 = 1 uso · 3 = 2 · 7 = 3 · 15 = 4 · 31 = 5 (caso peggiore). La penalità raddoppia dopo ogni uso dell’incudine.",
       finalItem: "Oggetto finale",
       startExisting: "Inizia con un oggetto già incantato",
       startExistingBook: "Inizia con un libro già incantato",
@@ -160,9 +168,11 @@
       selectOne: "Selecciona al menos un encantamiento.", limit: "Máximo 10 encantamientos",
       placeholder: "Elige un objeto y encantamientos para encontrar el orden más barato.",
       resultTitle: "Orden óptimo", totalCost: "Coste total", steps: "Pasos",
-      combine: "Combina", with: "con", cost: "Coste", prior: "Penalización de trabajo",
+      combine: "Combina", with: "con", cost: "Coste", prior: "Penalización resultante",
       completed: "Completado en", noSolution: "No se encontró ninguna solución dentro del límite de 39 niveles del yunque.",
       alreadyOptimal: "No hace falta trabajar en el yunque.", close: "Cerrar", book: "Libro encantado",
+      addAnotherExisting: "Añadir otro encantamiento existente…",
+      priorHint: "0 = nuevo · 1 = 1 uso · 3 = 2 · 7 = 3 · 15 = 4 · 31 = 5 (peor caso). La penalización se duplica tras cada uso del yunque.",
       finalItem: "Objeto final",
       startExisting: "Empezar con un objeto ya encantado",
       startExistingBook: "Empezar con un libro ya encantado",
@@ -187,9 +197,11 @@
       selectOne: "Виберіть принаймні одне зачарування.", limit: "Не більше 10 зачарувань",
       placeholder: "Виберіть предмет і зачарування, щоб знайти найдешевший порядок.",
       resultTitle: "Оптимальний порядок", totalCost: "Загальна вартість", steps: "Кроки",
-      combine: "Поєднайте", with: "із", cost: "Вартість", prior: "Штраф",
+      combine: "Поєднайте", with: "із", cost: "Вартість", prior: "Підсумковий штраф",
       completed: "Завершено за", noSolution: "Рішення не знайдено в межах ліміту ковадла у 39 рівнів.",
       alreadyOptimal: "Робота на ковадлі не потрібна.", close: "Закрити", book: "Зачарована книга",
+      addAnotherExisting: "Додати ще одне наявне зачарування…",
+      priorHint: "0 = новий · 1 = 1 використання · 3 = 2 · 7 = 3 · 15 = 4 · 31 = 5 (найгірший випадок). Штраф подвоюється після кожного використання ковадла.",
       finalItem: "Кінцевий предмет",
       startExisting: "Почати з уже зачарованого предмета",
       startExistingBook: "Почати з уже зачарованої книги",
@@ -214,9 +226,11 @@
       selectOne: "请至少选择一个附魔。", limit: "最多10个附魔",
       placeholder: "选择物品和附魔，找出最省成本的顺序。",
       resultTitle: "最佳顺序", totalCost: "总成本", steps: "步骤",
-      combine: "组合", with: "与", cost: "成本", prior: "累积惩罚",
+      combine: "组合", with: "与", cost: "成本", prior: "结果惩罚",
       completed: "完成于", noSolution: "在铁砧39级限制内未找到解决方案。",
       alreadyOptimal: "无需在铁砧上操作。", close: "关闭", book: "附魔书",
+      addAnotherExisting: "添加另一个现有附魔…",
+      priorHint: "0 = 全新 · 1 = 1 次使用 · 3 = 2 次 · 7 = 3 次 · 15 = 4 次 · 31 = 5 次（最坏情况）。每次使用铁砧后惩罚翻倍。",
       finalItem: "最终物品",
       startExisting: "从已附魔物品开始",
       startExistingBook: "从已附魔书开始",
@@ -241,9 +255,11 @@
       selectOne: "請至少選擇一個附魔。", limit: "最多10個附魔",
       placeholder: "選擇物品和附魔，找出最省成本的順序。",
       resultTitle: "最佳順序", totalCost: "總成本", steps: "步驟",
-      combine: "組合", with: "與", cost: "成本", prior: "累積懲罰",
+      combine: "組合", with: "與", cost: "成本", prior: "結果懲罰",
       completed: "完成於", noSolution: "在鐵砧39級限制內找不到解決方案。",
       alreadyOptimal: "無需在鐵砧上操作。", close: "關閉", book: "附魔書",
+      addAnotherExisting: "新增另一個現有附魔…",
+      priorHint: "0 = 全新 · 1 = 1 次使用 · 3 = 2 次 · 7 = 3 次 · 15 = 4 次 · 31 = 5 次（最壞情況）。每次使用鐵砧後懲罰翻倍。",
       finalItem: "最終物品",
       startExisting: "從已附魔物品開始",
       startExistingBook: "從已附魔書開始",
@@ -268,9 +284,11 @@
       selectOne: "エンチャントを1つ以上選択してください。", limit: "最大10個のエンチャント",
       placeholder: "アイテムとエンチャントを選び、最も安い順序を求めます。",
       resultTitle: "最適な順序", totalCost: "合計コスト", steps: "手順",
-      combine: "組み合わせ", with: "と", cost: "コスト", prior: "累積作業費用",
+      combine: "組み合わせ", with: "と", cost: "コスト", prior: "適用後の累積費用",
       completed: "所要時間", noSolution: "金床の39レベル制限内に解が見つかりませんでした。",
       alreadyOptimal: "金床での作業は不要です。", close: "閉じる", book: "エンチャントの本",
+      addAnotherExisting: "別の既存のエンチャントを追加…",
+      priorHint: "0 = 新品 · 1 = 1回使用 · 3 = 2回 · 7 = 3回 · 15 = 4回 · 31 = 5回（最悪）。金床を使用するたびにペナルティが倍になります。",
       finalItem: "最終アイテム",
       startExisting: "既にエンチャントされたアイテムから開始",
       startExistingBook: "既にエンチャントされた本から開始",
@@ -348,6 +366,7 @@
     existingList: document.getElementById("order-existing-list"),
     priorLabel: document.getElementById("order-prior-label"),
     priorWork: document.getElementById("order-prior-work"),
+    priorHint: document.getElementById("order-prior-hint"),
     allow: document.getElementById("order-allow-incompatible"),
     allowLabel: document.getElementById("order-allow-label"),
     modeLabel: document.getElementById("order-mode-label"),
@@ -528,7 +547,8 @@
     const candidates = eligible.filter(enchantment =>
       !selected.has(enchantment.id) && !conflictsWithExisting(enchantment.id)
     );
-    els.existingAdd.innerHTML = `<option value="">${escapeHTML(ot("addExisting"))}</option>` +
+    const addLabel = selected.size ? ot("addAnotherExisting") : ot("addExisting");
+    els.existingAdd.innerHTML = `<option value="">${escapeHTML(addLabel)}</option>` +
       candidates.map(enchantment => `<option value="${escapeHTML(enchantment.id)}">${escapeHTML(displayName(enchantment))}</option>`).join("");
     els.existingAdd.value = "";
 
@@ -1071,6 +1091,7 @@
     els.existingLabel.textContent = orderState.item === "book" ? ot("startExistingBook") : ot("startExisting");
     els.existingTitle.textContent = ot("existingEnchantments");
     els.priorLabel.textContent = ot("priorWork");
+    els.priorHint.textContent = ot("priorHint");
     if (els.priorWork) {
       els.priorWork.options[0].textContent = ot("worstCase");
       els.priorWork.options[1].textContent = ot("fresh");
