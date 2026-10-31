@@ -22,6 +22,7 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - Sort alphabetically or by max level
 - Compatible items, conflicts, added-in versions, and treasure/curse notes
 - Full-site localization for English, Ukrainian, Simplified Chinese, Traditional Chinese, German, French, Italian, Spanish, and Japanese (official names; wiki-sourced descriptions)
+- Footer link to report bugs or translation issues on GitHub
 - Header language selector navigates between crawlable locale URLs; search and sorting follow the selected language
 - Nine locale routes: `/`, `/de/`, `/fr/`, `/it/`, `/es/`, `/uk/`, `/zh-hans/`, `/zh-hant/`, and `/ja/`
 - Unique per-enchantment book icons from Even Better Enchants, shown in cards, details, and the optimizer
@@ -37,7 +38,7 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - Official names were extracted from the `en_us`, `uk_ua`, `zh_cn`, `zh_tw`, `de_de`, `fr_fr`, `it_it`, `es_es`, and `ja_jp` language files for Minecraft Java 26.3.
 - Added-in values use the Java release version rather than pre-release snapshot names.
 - Enchantment names, item names, and the enchanting table name use the official Java 26.3 in-game translations in all nine locales. Category labels, source groupings, and notes are editorial. Enchantment summaries and effects are adapted from the localized [Minecraft Wiki](https://minecraft.wiki/) editions, whose text is available under CC BY-NC-SA 3.0; they are community translations, not official game copy.
-- This is an unofficial fan project and is not affiliated with Mojang or Microsoft.
+- This is an unofficial fan project and is not affiliated with Mojang or Microsoft. Report bugs or translation issues at <https://github.com/zgv2-dev/enchantments-index/issues/new>.
 - The anvil order optimizer algorithm and data are adapted from iamcal/enchant-order, © 2021 Cal Henderson, under the MIT License. The upstream license is included at `assets/enchant-order-LICENSE.txt`.
 - Enchantment icons are from Even Better Enchants by Mythitorium, based on Better Enchant Books by Yomna. The Modrinth project lists Apache-2.0; the pack's bundled README says all rights reserved. See `assets/even-better-enchants-NOTICE.txt` and `assets/even-better-enchants-LICENSE.txt`; verify the applicable terms before commercial use.
 - Typeface: [Monocraft](https://github.com/IdreesInc/Monocraft) by Idrees Inc., licensed under the SIL Open Font License. The license is included at `assets/OFL.txt`.

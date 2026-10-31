@@ -3269,6 +3269,37 @@
     flex-wrap: wrap;
   }
 
+  .footer-report {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--lab-muted);
+    font-family: var(--lab-ui);
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .footer-report:hover {
+    color: var(--lab-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .footer-report svg {
+    width: 9px;
+    height: 9px;
+    flex: 0 0 auto;
+  }
+
+  .footer-report:focus-visible {
+    outline: 2px solid var(--lab-blue);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
   .footer-shapeshift {
     display: inline-flex;
     align-items: center;
@@ -4126,6 +4157,7 @@
     <p>Tutti i 43 incantesimi di Minecraft Java 26.3, con livelli massimi, categorie, oggetti compatibili e riepiloghi. Attiva JavaScript per ricerca, filtri, traduzioni ufficiali e pianificatore dell'incudine.</p>
     <p class="seo-langs"><strong>Lingua:</strong> <a hreflang="en" href="/">English</a> · <a hreflang="uk" href="/uk/">Українська</a> · <a hreflang="zh-Hans" href="/zh-hans/">简体中文</a> · <a hreflang="zh-Hant" href="/zh-hant/">繁體中文</a> · <a hreflang="de" href="/de/">Deutsch</a> · <a hreflang="fr" href="/fr/">Français</a> · <a hreflang="it" href="/it/" aria-current="page">Italiano</a> · <a hreflang="es" href="/es/">Español</a> · <a hreflang="ja" href="/ja/">日本語</a></p>
     <p>Shapeshift: <a href="https://shapeshift.mc.zgv2.dev/">Minecraft shape generator</a>.</p>
+    <p><a href="https://github.com/zgv2-dev/enchantments-index/issues/new">Segnala un problema</a></p>
     <ul>
       <li><strong>Affilatezza</strong> <span>Livello massimo V · Armi</span><p>Aggiunge 1 punto di danno extra per il primo livello e 0,5 punti di danno extra per ogni ulteriore livello a ogni attacco.</p></li>
       <li><strong>Affinità all'acqua</strong> <span>Livello massimo I · Armatura</span><p>Rende l'estrazione dei blocchi sott'acqua veloce quanto quella in superficie, quindi non viene rallentata di 5 volte come avviene normalmente stando con la testa sott'acqua. Quando si galleggia, invece, al posto di rallentare il tempo per estrarre i blocchi di 25 volte, lo rallenta solo di 5 volte grazie ad Affinità all'acqua.</p></li>
@@ -4395,6 +4427,10 @@
       Shapeshift
       <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
     </a>
+    <a class="footer-report" id="report-issue" href="https://github.com/zgv2-dev/enchantments-index/issues/new" target="_blank" rel="noopener" aria-label="Report an issue" title="Report an issue">
+      <span id="report-issue-label">Report an issue</span>
+      <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    </a>
   </footer>
 
   <div class="detail-backdrop" id="detail-backdrop" hidden></div>
@@ -4650,6 +4686,7 @@
       "switchToNight": "Switch to night mode",
       "switchToDay": "Switch to day mode",
       "language": "Language",
+      "reportIssue": "Report an issue",
       "categories": {
         "all": "All",
         "armor": "Armor",
@@ -4739,6 +4776,7 @@
       "switchToNight": "Zum Nachtmodus wechseln",
       "switchToDay": "Zum Tagmodus wechseln",
       "language": "Sprache",
+      "reportIssue": "Problem melden",
       "categories": {
         "all": "Alle",
         "armor": "Rüstung",
@@ -4828,6 +4866,7 @@
       "switchToNight": "Passer en mode nuit",
       "switchToDay": "Passer en mode jour",
       "language": "Langue",
+      "reportIssue": "Signaler un problème",
       "categories": {
         "all": "Tous",
         "armor": "Armure",
@@ -4917,6 +4956,7 @@
       "switchToNight": "Passa alla modalità notte",
       "switchToDay": "Passa alla modalità giorno",
       "language": "Lingua",
+      "reportIssue": "Segnala un problema",
       "categories": {
         "all": "Tutti",
         "armor": "Armatura",
@@ -5006,6 +5046,7 @@
       "switchToNight": "Cambiar al modo nocturno",
       "switchToDay": "Cambiar al modo diurno",
       "language": "Idioma",
+      "reportIssue": "Informar de un problema",
       "categories": {
         "all": "Todos",
         "armor": "Armadura",
@@ -5095,6 +5136,7 @@
       "switchToNight": "Перейти до нічного режиму",
       "switchToDay": "Перейти до денного режиму",
       "language": "Мова",
+      "reportIssue": "Повідомити про проблему",
       "categories": {
         "all": "Усі",
         "armor": "Броня",
@@ -5184,6 +5226,7 @@
       "switchToNight": "切换到夜间模式",
       "switchToDay": "切换到日间模式",
       "language": "语言",
+      "reportIssue": "报告问题",
       "categories": {
         "all": "全部",
         "armor": "盔甲",
@@ -5273,6 +5316,7 @@
       "switchToNight": "切換到夜間模式",
       "switchToDay": "切換到日間模式",
       "language": "語言",
+      "reportIssue": "回報問題",
       "categories": {
         "all": "全部",
         "armor": "盔甲",
@@ -6135,6 +6179,7 @@
     "switchToNight": "ナイトモードに切り替える",
     "switchToDay": "デイモードに切り替える",
     "language": "言語",
+      "reportIssue": "問題を報告",
     "categories": {
       "all": "すべて",
       "armor": "防具",
@@ -6959,7 +7004,9 @@
     levelLabel: document.querySelector('label[for="level-filter"]'),
     sortLabel: document.querySelector('label[for="sort-select"]'),
     resultsKicker: document.querySelector(".results-kicker"),
-    metaDescription: document.querySelector('meta[name="description"]')
+    metaDescription: document.querySelector('meta[name="description"]'),
+    reportIssue: document.getElementById("report-issue"),
+    reportIssueLabel: document.getElementById("report-issue-label")
   };
 
   const mobileQuery = window.matchMedia("(max-width: 1080px)");
@@ -7057,6 +7104,11 @@
     els.languageSelect.setAttribute("aria-label", t("language"));
     els.languageSelect.title = t("language");
     els.languageSelect.value = state.language;
+    if (els.reportIssueLabel) els.reportIssueLabel.textContent = t("reportIssue");
+    if (els.reportIssue) {
+      els.reportIssue.setAttribute("aria-label", t("reportIssue"));
+      els.reportIssue.title = t("reportIssue");
+    }
 
     [...els.level.options].forEach((option, index) => {
       option.textContent = index === 0 ? t("anyLevel") : `${t("levelLabel")} ${ROMAN[index]}`;

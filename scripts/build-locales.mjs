@@ -9,6 +9,7 @@ import vm from "node:vm";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const SITE = "https://enchantments.mc.zgv2.dev";
+const ISSUES_URL = "https://github.com/zgv2-dev/enchantments-index/issues/new";
 const SOURCE = path.join(ROOT, "index.html");
 const TODAY = new Date().toISOString().slice(0, 10);
 
@@ -214,6 +215,7 @@ function buildFallback(locale) {
     <p>${esc(FALLBACK_INTRO[locale.id] || FALLBACK_INTRO.en)}</p>
     <p class="seo-langs"><strong>${esc(ui.language)}:</strong> ${languages}</p>
     <p>Shapeshift: <a href="https://shapeshift.mc.zgv2.dev/">Minecraft shape generator</a>.</p>
+    <p><a href="${ISSUES_URL}">${esc(ui.reportIssue)}</a></p>
     <ul>
       ${items}
     </ul>
