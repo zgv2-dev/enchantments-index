@@ -21,6 +21,7 @@ Then visit <http://localhost:8000>.
 - Compatible items, conflicts, added-in versions, and treasure/curse notes
 - Full-site localization for English, Ukrainian, Simplified Chinese, Traditional Chinese, German, French, Italian, Spanish, and Japanese (official names; wiki-sourced descriptions)
 - Header language selector; search and sorting follow the selected language
+- On first visit the language follows the browser when supported; manual choices take precedence
 - Persistent day/night theme toggle
 - Responsive layout: persistent detail panel on desktop, modal drawer on smaller screens
 - Keyboard shortcuts: `/` focuses search, `Esc` clears/closes
