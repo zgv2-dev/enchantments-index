@@ -1,6 +1,6 @@
-# Enchantment Index
+# The Enchantment Codex
 
-A single-page, searchable Minecraft enchantment reference with a light green field-lab interface, a forest-green night mode, and blocky in-game-inspired details.
+A single-page, searchable Minecraft enchantment codex with a light green field-lab interface, a forest-green night mode, and blocky in-game-inspired details.
 
 ## Run it
 
