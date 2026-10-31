@@ -16,6 +16,7 @@ Then visit <http://localhost:8000>.
 
 - All 43 vanilla **Java Edition 26.3** enchantments, including Lunge
 - Instant search by enchantment name
+- Shareable per-enchantment links, e.g. `#mending`, including direct links into the mobile detail drawer
 - Filter by category or max level
 - Sort alphabetically or by max level
 - Compatible items, conflicts, added-in versions, and treasure/curse notes

@@ -6878,6 +6878,39 @@
     });
   }
 
+  function decodeHashId() {
+    const raw = window.location.hash.replace(/^#/, "");
+    if (!raw) return null;
+    try {
+      return decodeURIComponent(raw);
+    } catch (_) {
+      return raw;
+    }
+  }
+
+  function enchantmentIdFromHash() {
+    const id = decodeHashId();
+    return ENCHANTMENTS.some(enchantment => enchantment.id === id) ? id : null;
+  }
+
+  function replaceUrlHash(id) {
+    const base = window.location.href.split("#")[0];
+    const next = id ? `${base}#${encodeURIComponent(id)}` : base;
+    if (window.location.href === next) return;
+    try {
+      history.replaceState(null, "", next);
+    } catch (_) {}
+  }
+
+  function syncSelectedHash(id = state.selected) {
+    if (!id || (mobileQuery.matches && !state.drawerOpen)) {
+      if (window.location.hash) replaceUrlHash(null);
+      return;
+    }
+    if (decodeHashId() === id) return;
+    replaceUrlHash(id);
+  }
+
   function selectEnchantment(id, options = {}) {
     const enchantment = ENCHANTMENTS.find(e => e.id === id);
     if (!enchantment) return;
@@ -6885,6 +6918,7 @@
     updateSelectedCard();
     renderDetail(enchantment);
     if (options.open && mobileQuery.matches) openDrawer();
+    if (!options.skipHash) syncSelectedHash(id);
   }
 
   function updateResultHeading(list) {
@@ -6920,10 +6954,12 @@
 
     if (list.length === 0) {
       renderDetail(null);
+      syncSelectedHash(null);
     } else if (!list.some(enchantment => enchantment.id === state.selected)) {
       state.selected = list[0].id;
       updateSelectedCard();
       renderDetail(list[0]);
+      syncSelectedHash(state.selected);
     } else {
       updateSelectedCard();
       renderDetail(ENCHANTMENTS.find(enchantment => enchantment.id === state.selected));
@@ -6963,6 +6999,7 @@
     els.detailPanel.removeAttribute("aria-modal");
     els.backdrop.hidden = true;
     document.body.classList.remove("drawer-open");
+    if (mobileQuery.matches) syncSelectedHash(null);
     if (returnFocus && lastFocused && typeof lastFocused.focus === "function") {
       lastFocused.focus({ preventScroll: true });
     }
@@ -7073,13 +7110,24 @@
 
   mobileQuery.addEventListener("change", event => {
     if (!event.matches && state.drawerOpen) closeDrawer(false);
+    syncSelectedHash(state.selected);
+  });
+
+  window.addEventListener("hashchange", () => {
+    const id = enchantmentIdFromHash();
+    if (!id) return;
+    selectEnchantment(id, { open: mobileQuery.matches && !state.drawerOpen, skipHash: true });
   });
 
   els.languageSelect.value = state.language;
   updateStaticText();
   renderCategories();
-  state.selected = ENCHANTMENTS[0].id;
+  const initialHashId = enchantmentIdFromHash();
+  state.selected = initialHashId || ENCHANTMENTS[0].id;
+  if (window.location.hash && !initialHashId) replaceUrlHash(null);
   render();
+  if (initialHashId && mobileQuery.matches) openDrawer();
+  if (!initialHashId && !mobileQuery.matches) syncSelectedHash(state.selected);
 </script>
 
 <script type="text/plain" id="order-worker-source">
