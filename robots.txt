@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zgv2-dev.github.io/enchantments-index/sitemap.xml

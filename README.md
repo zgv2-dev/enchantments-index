@@ -40,3 +40,9 @@ Then visit <http://localhost:8000>.
 - Enchantment icons are from Even Better Enchants by Mythitorium, based on Better Enchant Books by Yomna. The Modrinth project lists Apache-2.0; the pack's bundled README says all rights reserved. See `assets/even-better-enchants-NOTICE.txt` and `assets/even-better-enchants-LICENSE.txt`; verify the applicable terms before commercial use.
 - Typeface: [Monocraft](https://github.com/IdreesInc/Monocraft) by Idrees Inc., licensed under the SIL Open Font License. The license is included at `assets/OFL.txt`.
 
+## SEO and deployment
+
+- Includes canonical metadata, Open Graph/Twitter cards, a 1200×630 social image, JSON-LD (`WebSite`, `WebApplication`, and a 43-item `ItemList`), `robots.txt`, `sitemap.xml`, a web manifest, and a no-JavaScript fallback listing every enchantment.
+- Metadata currently targets the default GitHub Pages URL: `https://zgv2-dev.github.io/enchantments-index/`.
+- Enable GitHub Pages from the `main` branch root. If deploying to a custom domain, update the canonical URL, `og:url`, `og:image`, `sitemap.xml`, and `robots.txt`.
+- For GitHub project pages, `robots.txt` is served under the project path rather than the domain root; submit `sitemap.xml` in Google Search Console, or use a custom domain for root-level robots discovery.
