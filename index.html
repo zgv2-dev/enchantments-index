@@ -648,6 +648,165 @@
     font-weight: 400;
   }
 
+  .shapeshift-ad {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(260px, .92fr);
+    gap: 18px;
+    align-items: stretch;
+    margin: 0 0 16px;
+    padding: 16px;
+    overflow: hidden;
+    border: 1px solid var(--lab-line);
+    border-radius: 14px;
+    background:
+      radial-gradient(520px 220px at 100% 0%, rgba(47, 125, 50, .06), transparent 65%),
+      var(--lab-paper);
+    color: var(--lab-ink);
+    box-shadow: var(--lab-shadow);
+  }
+
+  .shapeshift-ad-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+  }
+
+  .shapeshift-ad-kicker {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 0 7px;
+    color: var(--lab-blue);
+    font-family: var(--lab-ui);
+    font-size: 8px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  .shapeshift-ad-kicker img {
+    display: block;
+    width: 16px;
+    height: 16px;
+    flex: 0 0 16px;
+  }
+
+  .shapeshift-ad h3 {
+    margin: 0 0 6px;
+    color: var(--lab-ink);
+    font-family: var(--lab-ui);
+    font-size: 20px;
+    font-weight: 750;
+    line-height: 1.12;
+    letter-spacing: -.02em;
+  }
+
+  .shapeshift-ad-body {
+    max-width: 56ch;
+    margin: 0 0 10px;
+    color: var(--lab-muted);
+    font-family: var(--lab-ui);
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .shapeshift-ad-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 0 10px;
+    color: var(--lab-faint);
+    font-family: var(--lab-ui);
+    font-size: 9px;
+    line-height: 1.4;
+  }
+
+  .shapeshift-ad-chips span {
+    white-space: nowrap;
+  }
+
+  .shapeshift-ad-chips span + span::before {
+    content: "·";
+    padding: 0 6px;
+    color: var(--lab-line);
+  }
+
+  .shapeshift-ad-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: auto;
+    padding: 4px 0;
+    color: var(--lab-blue);
+    font-family: var(--lab-ui);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+  }
+
+  .shapeshift-ad-cta:hover {
+    color: var(--lab-ink);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .shapeshift-ad-cta svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  .shapeshift-ad-cta:focus-visible,
+  .shapeshift-ad-visual:focus-visible {
+    outline: 2px solid var(--lab-blue);
+    outline-offset: 3px;
+  }
+
+  .shapeshift-ad-visual {
+    display: block;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--lab-line);
+    border-radius: 9px;
+    background: #08100a;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, .08);
+  }
+
+  .shapeshift-ad-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 800px) {
+    .shapeshift-ad {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .shapeshift-ad-visual {
+      aspect-ratio: 16 / 7;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .shapeshift-ad {
+      padding: 14px;
+      gap: 0;
+    }
+
+    .shapeshift-ad h3 {
+      font-size: 17px;
+    }
+
+    .shapeshift-ad-visual {
+      display: none;
+    }
+  }
+
   .ench-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4204,6 +4363,29 @@
         </div>
       </div>
 
+      <aside class="shapeshift-ad" aria-labelledby="shapeshift-ad-title">
+        <div class="shapeshift-ad-copy">
+          <p class="shapeshift-ad-kicker">
+            <img src="assets/shapeshift-icon.svg" alt="" width="16" height="16">
+            <span id="shapeshift-ad-kicker">From the same workshop</span>
+          </p>
+          <h3 id="shapeshift-ad-title">Minecraft shapes that don't look like boxes.</h3>
+          <p class="shapeshift-ad-body" id="shapeshift-ad-body">Shapeshift is my other Minecraft tool: 37 parametric shapes with half-slab curves, real 26.3 textures, 3D previews and layer-by-layer blueprints. Export straight to Litematica, WorldEdit or a structure block.</p>
+          <div class="shapeshift-ad-chips" aria-hidden="true">
+            <span id="shapeshift-ad-chip-0">37 shapes</span>
+            <span id="shapeshift-ad-chip-1">Half-slab curves</span>
+            <span id="shapeshift-ad-chip-2">Schematic export</span>
+          </div>
+          <a class="shapeshift-ad-cta" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener">
+            <span id="shapeshift-ad-cta">Explore Shapeshift</span>
+            <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          </a>
+        </div>
+        <a class="shapeshift-ad-visual" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
+          <img src="assets/shapeshift-preview.webp" alt="" width="960" height="600" loading="lazy" decoding="async">
+        </a>
+      </aside>
+
       <div class="ench-grid" id="ench-grid"></div>
       </section>
     </div>
@@ -6005,6 +6187,108 @@
       "Trial chamber vaults": "試練の間の保管庫"
     }
   };
+  const SHAPESHIFT_AD_I18N = {
+    "en": {
+      "kicker": "From the same workshop",
+      "title": "Minecraft shapes that don't look like boxes.",
+      "body": "Shapeshift is my other Minecraft tool: 37 parametric shapes with half-slab curves, real 26.3 textures, 3D previews and layer-by-layer blueprints. Export straight to Litematica, WorldEdit or a structure block.",
+      "cta": "Explore Shapeshift",
+      "chips": [
+        "37 shapes",
+        "Half-slab curves",
+        "Schematic export"
+      ]
+    },
+    "de": {
+      "kicker": "Aus derselben Werkstatt",
+      "title": "Minecraft-Formen, die nicht wie Kisten aussehen.",
+      "body": "Shapeshift ist mein anderes Minecraft-Tool: 37 parametrische Formen mit Halbstufen-Kurven, echten 26.3-Texturen, 3D-Vorschauen und Schichtplänen. Exportiere direkt nach Litematica, WorldEdit oder in einen Strukturblock.",
+      "cta": "Shapeshift entdecken",
+      "chips": [
+        "37 Formen",
+        "Halbstufen-Kurven",
+        "Schematic-Export"
+      ]
+    },
+    "fr": {
+      "kicker": "Du même atelier",
+      "title": "Des formes Minecraft qui ne ressemblent pas à des cubes.",
+      "body": "Shapeshift est mon autre outil Minecraft : 37 formes paramétriques avec des courbes en demi-dalles, de vraies textures 26.3, des aperçus 3D et des plans par couche. Exportez vers Litematica, WorldEdit ou un bloc de structure.",
+      "cta": "Découvrir Shapeshift",
+      "chips": [
+        "37 formes",
+        "Courbes en demi-dalles",
+        "Export de schémas"
+      ]
+    },
+    "it": {
+      "kicker": "Dallo stesso studio",
+      "title": "Forme Minecraft che non sembrano scatole.",
+      "body": "Shapeshift è il mio altro strumento per Minecraft: 37 forme parametriche con curve a mezza lastra, texture reali 26.3, anteprime 3D e planimetrie a strati. Esporta in Litematica, WorldEdit o in un blocco struttura.",
+      "cta": "Scopri Shapeshift",
+      "chips": [
+        "37 forme",
+        "Curve a mezza lastra",
+        "Export schematic"
+      ]
+    },
+    "es": {
+      "kicker": "Del mismo taller",
+      "title": "Formas de Minecraft que no parecen cajas.",
+      "body": "Shapeshift es mi otra herramienta de Minecraft: 37 formas paramétricas con curvas de media losa, texturas reales de 26.3, vistas previas en 3D y planos por capas. Exporta a Litematica, WorldEdit o a un bloque de estructura.",
+      "cta": "Descubrir Shapeshift",
+      "chips": [
+        "37 formas",
+        "Curvas de media losa",
+        "Exportar esquemas"
+      ]
+    },
+    "uk": {
+      "kicker": "З тієї ж майстерні",
+      "title": "Форми Minecraft, які не схожі на коробки.",
+      "body": "Shapeshift — мій інший інструмент для Minecraft: 37 параметричних форм із напівплитковими кривими, справжніми текстурами 26.3, 3D-переглядом і пошаровими схемами. Експорт у Litematica, WorldEdit або блок структури.",
+      "cta": "Дослідити Shapeshift",
+      "chips": [
+        "37 форм",
+        "Напівплиткові криві",
+        "Експорт схем"
+      ]
+    },
+    "zhCn": {
+      "kicker": "同一工作室出品",
+      "title": "不像方块的 Minecraft 造型。",
+      "body": "Shapeshift 是我另一个 Minecraft 工具：可用半砖曲线、真实 26.3 材质、3D 预览和逐层蓝图构建 37 种参数化造型，并导出到 Litematica、WorldEdit 或结构方块。",
+      "cta": "探索 Shapeshift",
+      "chips": [
+        "37 种造型",
+        "半砖曲线",
+        "导出结构"
+      ]
+    },
+    "zhTw": {
+      "kicker": "同一工作室出品",
+      "title": "不像方塊的 Minecraft 造型。",
+      "body": "Shapeshift 是我另一個 Minecraft 工具：可用半磚曲線、真實 26.3 材質、3D 預覽和逐層藍圖建構 37 種參數化造型，並匯出到 Litematica、WorldEdit 或結構方塊。",
+      "cta": "探索 Shapeshift",
+      "chips": [
+        "37 種造型",
+        "半磚曲線",
+        "匯出結構"
+      ]
+    },
+    "ja": {
+      "kicker": "同じ工房から",
+      "title": "箱っぽくない Minecraft の形。",
+      "body": "Shapeshift は私のもうひとつの Minecraft ツールです。ハーフスラブの曲線、実際の 26.3 テクスチャ、3D プレビュー、レイヤー設計図を使って 37 種類のパラメトリック形状を作成し、Litematica、WorldEdit、ストラクチャーブロックへ書き出せます。",
+      "cta": "Shapeshift を見る",
+      "chips": [
+        "37 シェイプ",
+        "ハーフスラブ曲線",
+        "構造物を書き出し"
+      ]
+    }
+  };
+
   const JA_NAMES = {
     "aqua_affinity": "水中採掘",
     "bane_of_arthropods": "虫特効",
@@ -6724,6 +7008,19 @@
     }
   }
 
+  function updateShapeshiftAd() {
+    const copy = SHAPESHIFT_AD_I18N[state.language] || SHAPESHIFT_AD_I18N.en;
+    const setText = (id, value) => {
+      const element = document.getElementById(id);
+      if (element) element.textContent = value;
+    };
+    setText("shapeshift-ad-kicker", copy.kicker);
+    setText("shapeshift-ad-title", copy.title);
+    setText("shapeshift-ad-body", copy.body);
+    setText("shapeshift-ad-cta", copy.cta);
+    copy.chips.forEach((chip, index) => setText(`shapeshift-ad-chip-${index}`, chip));
+  }
+
   function updateStaticText() {
     document.documentElement.lang = LANGUAGE_HTML[state.language];
     document.title = t("pageTitle");
@@ -6754,6 +7051,7 @@
 
     els.clearFilters.textContent = t("clearFilters");
     if (els.resultsKicker) els.resultsKicker.textContent = t("theIndex");
+    updateShapeshiftAd();
     applyTheme(state.theme, false);
   }
 
