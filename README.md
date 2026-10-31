@@ -27,7 +27,10 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - Nine locale routes: `/`, `/de/`, `/fr/`, `/it/`, `/es/`, `/uk/`, `/zh-hans/`, `/zh-hant/`, and `/ja/`
 - Unique per-enchantment book icons from Even Better Enchants, shown in cards, details, and the optimizer
 - Built-in anvil order optimizer adapted from [iamcal/enchant-order](https://github.com/iamcal/enchant-order)
+- Start from a clean item, an already enchanted item, or an existing enchanted book, with existing levels and a prior-work penalty
+- Targeted book builder: choose the item a book is for, and only compatible enchantments are offered
 - Order optimizer limits item choices to the active Armor/Weapons/Tools/Ranged/Trident/Fishing filter
+- Existing-item mode defaults to the worst-case prior-work penalty (31 levels); fresh found loot can be set to 0
 - Persistent day/night theme toggle
 - Responsive layout: persistent detail panel on desktop, modal drawer on smaller screens
 - Keyboard shortcuts: `/` focuses search, `Esc` clears/closes
@@ -39,7 +42,7 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - Added-in values use the Java release version rather than pre-release snapshot names.
 - Enchantment names, item names, and the enchanting table name use the official Java 26.3 in-game translations in all nine locales. Category labels, source groupings, and notes are editorial. Enchantment summaries and effects are adapted from the localized [Minecraft Wiki](https://minecraft.wiki/) editions, whose text is available under CC BY-NC-SA 3.0; they are community translations, not official game copy.
 - This is an unofficial fan project and is not affiliated with Mojang or Microsoft. Report bugs or translation issues at <https://github.com/zgv2-dev/enchantments-index/issues/new>.
-- The anvil order optimizer algorithm and data are adapted from iamcal/enchant-order, © 2021 Cal Henderson, under the MIT License. The upstream license is included at `assets/enchant-order-LICENSE.txt`.
+- The anvil order optimizer algorithm and data are adapted from iamcal/enchant-order, © 2021 Cal Henderson, under the MIT License. The upstream license is included at `assets/enchant-order-LICENSE.txt`. The cost model uses the Java anvil rules: prior-work penalty `2^n - 1`, a 39-level operation cap, and final-level enchantment costs. Existing-item mode defaults to worst-case `31` (5 prior uses); generated loot usually has `0`. New-book levels are book levels; an equal-level book upgrades the target by one, matching Java. The model assumes full durability and ignores renaming costs.
 - Enchantment icons are from Even Better Enchants by Mythitorium, based on Better Enchant Books by Yomna. The Modrinth project lists Apache-2.0; the pack's bundled README says all rights reserved. See `assets/even-better-enchants-NOTICE.txt` and `assets/even-better-enchants-LICENSE.txt`; verify the applicable terms before commercial use.
 - Typeface: [Monocraft](https://github.com/IdreesInc/Monocraft) by Idrees Inc., licensed under the SIL Open Font License. The license is included at `assets/OFL.txt`.
 - Category tab icons use Minecraft Java 26.3 item/block textures and renders, including the inventory anvil icon and a witch head for Curses. Minecraft assets are © Mojang/Microsoft and are used here in this unofficial fan project.

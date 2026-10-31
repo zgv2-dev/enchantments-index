@@ -55,6 +55,17 @@
       combine: "Combine", with: "with", cost: "Cost", prior: "Prior work",
       completed: "Completed in", noSolution: "No solution found within the anvil's 39-level limit.",
       alreadyOptimal: "No anvil work needed.", close: "Close", book: "Enchanted book",
+      finalItem: "Final item",
+      startExisting: "Start with an already enchanted item",
+      startExistingBook: "Start with an already enchanted book",
+      existingEnchantments: "Existing enchantments",
+      addExisting: "Add existing enchantment…",
+      priorWork: "Prior work penalty",
+      worstCase: "Worst case — 31",
+      fresh: "Fresh — 0",
+      bookFor: "Book for",
+      anyItem: "Any item",
+      remove: "Remove",
       levelOne: "level", levelMany: "levels", xp: "XP",
       source: "Algorithm adapted from iamcal/enchant-order (MIT)."
     },
@@ -71,6 +82,17 @@
       combine: "Kombiniere", with: "mit", cost: "Kosten", prior: "Vorherige Zusatzkosten",
       completed: "Gefunden in", noSolution: "Keine Lösung innerhalb des Ambosslimits von 39 Stufen gefunden.",
       alreadyOptimal: "Keine Ambossarbeit nötig.", close: "Schließen", book: "Verzaubertes Buch",
+      finalItem: "Endergebnis",
+      startExisting: "Mit bereits verzaubertem Gegenstand beginnen",
+      startExistingBook: "Mit bereits verzaubertem Buch beginnen",
+      existingEnchantments: "Vorhandene Verzauberungen",
+      addExisting: "Vorhandene Verzauberung hinzufügen…",
+      priorWork: "Vorherige Zusatzkosten",
+      worstCase: "Worst Case — 31",
+      fresh: "Frisch — 0",
+      bookFor: "Buch für",
+      anyItem: "Beliebiger Gegenstand",
+      remove: "Entfernen",
       levelOne: "Stufe", levelMany: "Stufen", xp: "XP",
       source: "Algorithmus angepasst von iamcal/enchant-order (MIT)."
     },
@@ -87,6 +109,17 @@
       combine: "Combinez", with: "avec", cost: "Coût", prior: "Pénalité de réparations antérieures",
       completed: "Terminé en", noSolution: "Aucune solution trouvée dans la limite de 39 niveaux de l'enclume.",
       alreadyOptimal: "Aucun travail à l'enclume nécessaire.", close: "Fermer", book: "Livre enchanté",
+      finalItem: "Objet final",
+      startExisting: "Commencer avec un objet déjà enchanté",
+      startExistingBook: "Commencer avec un livre déjà enchanté",
+      existingEnchantments: "Enchantements existants",
+      addExisting: "Ajouter un enchantement existant…",
+      priorWork: "Pénalité de réparations antérieures",
+      worstCase: "Pire cas — 31",
+      fresh: "Neuf — 0",
+      bookFor: "Livre pour",
+      anyItem: "N’importe quel objet",
+      remove: "Retirer",
       levelOne: "niveau", levelMany: "niveaux", xp: "XP",
       source: "Algorithme adapté de iamcal/enchant-order (MIT)."
     },
@@ -103,6 +136,17 @@
       combine: "Unisci", with: "con", cost: "Costo", prior: "Penalità per il lavoro precedente",
       completed: "Completato in", noSolution: "Nessuna soluzione trovata entro il limite di 39 livelli dell'incudine.",
       alreadyOptimal: "Nessun lavoro all'incudine necessario.", close: "Chiudi", book: "Libro incantato",
+      finalItem: "Oggetto finale",
+      startExisting: "Inizia con un oggetto già incantato",
+      startExistingBook: "Inizia con un libro già incantato",
+      existingEnchantments: "Incantesimi esistenti",
+      addExisting: "Aggiungi incantesimo esistente…",
+      priorWork: "Penalità per il lavoro precedente",
+      worstCase: "Caso peggiore — 31",
+      fresh: "Nuovo — 0",
+      bookFor: "Libro per",
+      anyItem: "Qualsiasi oggetto",
+      remove: "Rimuovi",
       levelOne: "livello", levelMany: "livelli", xp: "XP",
       source: "Algoritmo adattato da iamcal/enchant-order (MIT)."
     },
@@ -119,6 +163,17 @@
       combine: "Combina", with: "con", cost: "Coste", prior: "Penalización de trabajo",
       completed: "Completado en", noSolution: "No se encontró ninguna solución dentro del límite de 39 niveles del yunque.",
       alreadyOptimal: "No hace falta trabajar en el yunque.", close: "Cerrar", book: "Libro encantado",
+      finalItem: "Objeto final",
+      startExisting: "Empezar con un objeto ya encantado",
+      startExistingBook: "Empezar con un libro ya encantado",
+      existingEnchantments: "Encantamientos existentes",
+      addExisting: "Añadir encantamiento existente…",
+      priorWork: "Penalización de trabajo",
+      worstCase: "Peor caso — 31",
+      fresh: "Nuevo — 0",
+      bookFor: "Libro para",
+      anyItem: "Cualquier objeto",
+      remove: "Quitar",
       levelOne: "nivel", levelMany: "niveles", xp: "XP",
       source: "Algoritmo adaptado de iamcal/enchant-order (MIT)."
     },
@@ -135,6 +190,17 @@
       combine: "Поєднайте", with: "із", cost: "Вартість", prior: "Штраф",
       completed: "Завершено за", noSolution: "Рішення не знайдено в межах ліміту ковадла у 39 рівнів.",
       alreadyOptimal: "Робота на ковадлі не потрібна.", close: "Закрити", book: "Зачарована книга",
+      finalItem: "Кінцевий предмет",
+      startExisting: "Почати з уже зачарованого предмета",
+      startExistingBook: "Почати з уже зачарованої книги",
+      existingEnchantments: "Наявні зачарування",
+      addExisting: "Додати наявне зачарування…",
+      priorWork: "Штраф за попередню роботу",
+      worstCase: "Найгірший випадок — 31",
+      fresh: "Новий — 0",
+      bookFor: "Книга для",
+      anyItem: "Будь-який предмет",
+      remove: "Видалити",
       levelOne: "рівень", levelMany: "рівнів", xp: "XP",
       source: "Алгоритм адаптовано з iamcal/enchant-order (MIT)."
     },
@@ -151,6 +217,17 @@
       combine: "组合", with: "与", cost: "成本", prior: "累积惩罚",
       completed: "完成于", noSolution: "在铁砧39级限制内未找到解决方案。",
       alreadyOptimal: "无需在铁砧上操作。", close: "关闭", book: "附魔书",
+      finalItem: "最终物品",
+      startExisting: "从已附魔物品开始",
+      startExistingBook: "从已附魔书开始",
+      existingEnchantments: "现有附魔",
+      addExisting: "添加现有附魔…",
+      priorWork: "累积惩罚",
+      worstCase: "最坏情况 — 31",
+      fresh: "全新 — 0",
+      bookFor: "附魔书适用",
+      anyItem: "任意物品",
+      remove: "移除",
       levelOne: "级", levelMany: "级", xp: "经验",
       source: "算法改编自 iamcal/enchant-order（MIT）。"
     },
@@ -167,6 +244,17 @@
       combine: "組合", with: "與", cost: "成本", prior: "累積懲罰",
       completed: "完成於", noSolution: "在鐵砧39級限制內找不到解決方案。",
       alreadyOptimal: "無需在鐵砧上操作。", close: "關閉", book: "附魔書",
+      finalItem: "最終物品",
+      startExisting: "從已附魔物品開始",
+      startExistingBook: "從已附魔書開始",
+      existingEnchantments: "現有附魔",
+      addExisting: "新增現有附魔…",
+      priorWork: "累積懲罰",
+      worstCase: "最壞情況 — 31",
+      fresh: "全新 — 0",
+      bookFor: "附魔書適用",
+      anyItem: "任意物品",
+      remove: "移除",
       levelOne: "級", levelMany: "級", xp: "經驗",
       source: "演算法改編自 iamcal/enchant-order（MIT）。"
     },
@@ -183,6 +271,17 @@
       combine: "組み合わせ", with: "と", cost: "コスト", prior: "累積作業費用",
       completed: "所要時間", noSolution: "金床の39レベル制限内に解が見つかりませんでした。",
       alreadyOptimal: "金床での作業は不要です。", close: "閉じる", book: "エンチャントの本",
+      finalItem: "最終アイテム",
+      startExisting: "既にエンチャントされたアイテムから開始",
+      startExistingBook: "既にエンチャントされた本から開始",
+      existingEnchantments: "既存のエンチャント",
+      addExisting: "既存のエンチャントを追加…",
+      priorWork: "累積作業費用",
+      worstCase: "最悪のケース — 31",
+      fresh: "新品 — 0",
+      bookFor: "本の対象",
+      anyItem: "任意のアイテム",
+      remove: "削除",
       levelOne: "レベル", levelMany: "レベル", xp: "XP",
       source: "アルゴリズムは iamcal/enchant-order（MIT）を基にしています。"
     }
@@ -238,6 +337,17 @@
     form: document.getElementById("order-form"),
     item: document.getElementById("order-item"),
     itemLabel: document.getElementById("order-item-label"),
+    bookForWrap: document.getElementById("order-book-for-wrap"),
+    bookForLabel: document.getElementById("order-book-for-label"),
+    bookFor: document.getElementById("order-book-for"),
+    existing: document.getElementById("order-existing"),
+    existingLabel: document.getElementById("order-existing-label"),
+    existingBuilder: document.getElementById("order-existing-builder"),
+    existingTitle: document.getElementById("order-existing-title"),
+    existingAdd: document.getElementById("order-existing-add"),
+    existingList: document.getElementById("order-existing-list"),
+    priorLabel: document.getElementById("order-prior-label"),
+    priorWork: document.getElementById("order-prior-work"),
     allow: document.getElementById("order-allow-incompatible"),
     allowLabel: document.getElementById("order-allow-label"),
     modeLabel: document.getElementById("order-mode-label"),
@@ -255,6 +365,9 @@
     time: document.getElementById("order-time"),
     totalLabel: document.getElementById("order-total-label"),
     totalValue: document.getElementById("order-total-value"),
+    finalRow: document.getElementById("order-final"),
+    finalLabel: document.getElementById("order-final-label"),
+    finalValue: document.getElementById("order-final-value"),
     stepsTitle: document.getElementById("order-steps-title"),
     steps: document.getElementById("order-steps"),
     placeholder: document.getElementById("order-placeholder"),
@@ -264,6 +377,10 @@
 
   const orderState = {
     item: "",
+    bookFor: "",
+    existing: false,
+    existingLevels: new Map(),
+    priorWork: 5,
     selected: new Map(),
     result: null,
     elapsed: 0,
@@ -356,12 +473,103 @@
     els.item.value = allowed.includes(current) ? current : "";
     orderState.item = els.item.value;
     updateOrderScope();
+    renderBookForOptions();
+  }
+
+  function bookForTarget() {
+    return orderState.bookFor || "book";
+  }
+
+  function conflictsWithExisting(id) {
+    if (!orderState.existing) return false;
+    return [...orderState.existingLevels.keys()].some(existingId =>
+      existingId !== id && (OD.enchants[id]?.incompatible || []).includes(existingId)
+    );
   }
 
   function eligibleEnchantments(itemId) {
+    const effectiveItem = itemId === "book" ? bookForTarget() : itemId;
     return ENCHANTMENTS
-      .filter(enchantment => itemId === "book" || (OD.enchants[enchantment.id]?.items || []).includes(itemId))
+      .filter(enchantment =>
+        effectiveItem === "book" || (OD.enchants[enchantment.id]?.items || []).includes(effectiveItem)
+      )
+      .filter(enchantment => !conflictsWithExisting(enchantment.id))
       .sort((a, b) => displayName(a).localeCompare(displayName(b), LANGUAGE_HTML[state.language] || "en"));
+  }
+
+  function renderBookForOptions() {
+    const isBook = els.item.value === "book";
+    els.bookForWrap.hidden = !isBook;
+    if (!isBook) {
+      orderState.bookFor = "";
+      return;
+    }
+    const allowed = allowedOrderItems().filter(id => id !== "book");
+    if (!allowed.includes(orderState.bookFor)) orderState.bookFor = "";
+    els.bookFor.innerHTML = `<option value="">${escapeHTML(ot("anyItem"))}</option>` +
+      allowed.map(id => `<option value="${escapeHTML(id)}">${escapeHTML(itemLabel(id))}</option>`).join("");
+    els.bookFor.value = orderState.bookFor;
+    if (els.existingLabel) {
+      els.existingLabel.textContent = els.item.value === "book" ? ot("startExistingBook") : ot("startExisting");
+    }
+  }
+
+  function renderExistingRows() {
+    const enabled = els.existing.checked;
+    orderState.existing = enabled;
+    els.existingBuilder.hidden = !enabled;
+    if (!enabled) {
+      els.existingList.innerHTML = "";
+      return;
+    }
+
+    const eligible = eligibleEnchantments(orderState.item);
+    const selected = orderState.existingLevels;
+    const candidates = eligible.filter(enchantment =>
+      !selected.has(enchantment.id) && !conflictsWithExisting(enchantment.id)
+    );
+    els.existingAdd.innerHTML = `<option value="">${escapeHTML(ot("addExisting"))}</option>` +
+      candidates.map(enchantment => `<option value="${escapeHTML(enchantment.id)}">${escapeHTML(displayName(enchantment))}</option>`).join("");
+    els.existingAdd.value = "";
+
+    const rows = [...selected.entries()]
+      .map(([id, levelValue]) => {
+        const enchantment = ENCH_BY_ID[id];
+        if (!enchantment) return "";
+        const level = Math.min(enchantment.maxLevel, Math.max(1, levelValue));
+        const levelControl = enchantment.maxLevel > 1
+          ? `<select class="order-existing-level" data-id="${escapeHTML(id)}" aria-label="${escapeHTML(`${displayName(enchantment)} ${ot("level")}`)}">${Array.from({ length: enchantment.maxLevel }, (_, index) => {
+              const value = index + 1;
+              return `<option value="${value}"${value === level ? " selected" : ""}>${ROMAN[value]}</option>`;
+            }).join("")}</select>`
+          : `<span class="order-existing-fixed" aria-hidden="true">I</span>`;
+        return `<div class="order-existing-row" data-id="${escapeHTML(id)}">
+          <img class="order-existing-icon" src="assets/enchant-icons/${escapeHTML(id)}.png" alt="" width="14" height="14" loading="lazy">
+          <span class="order-existing-name">${escapeHTML(displayName(enchantment))}</span>
+          ${levelControl}
+          <button class="order-existing-remove" type="button" data-id="${escapeHTML(id)}" aria-label="${escapeHTML(ot("remove"))}">×</button>
+        </div>`;
+      })
+      .filter(Boolean)
+      .join("");
+    els.existingList.innerHTML = rows;
+    if (els.priorWork) els.priorWork.value = String(orderState.priorWork);
+  }
+
+  function addExistingEnchant(id) {
+    const enchantment = ENCH_BY_ID[id];
+    if (!enchantment || orderState.existingLevels.has(id)) return;
+    orderState.existingLevels.set(id, enchantment.maxLevel);
+    clearResult();
+    renderExistingRows();
+    renderEnchantRows(new Map(orderState.selected));
+  }
+
+  function removeExistingEnchant(id) {
+    if (!orderState.existingLevels.delete(id)) return;
+    clearResult();
+    renderExistingRows();
+    renderEnchantRows(new Map(orderState.selected));
   }
 
   function readSelection() {
@@ -663,8 +871,24 @@
     }
   }
 
+  function baseItemId(node) {
+    if (!node || typeof node !== "object") return "";
+    if (typeof node.I === "string" && OD.items.includes(node.I)) return node.I;
+    return baseItemId(node.L) || baseItemId(node.R);
+  }
+
   function collectNode(node, acc) {
     if (!node || typeof node !== "object") return;
+    if (node.levels) {
+      Object.entries(node.levels).forEach(([id, level]) => {
+        if (!acc.enchants.some(([existingId]) => existingId === id)) {
+          acc.enchants.push([id, Number(level)]);
+        }
+      });
+      const itemId = baseItemId(node);
+      if (itemId) acc.item = itemId;
+      return;
+    }
     if (typeof node.I === "string") {
       if (ENCH_BY_ID[node.I]) {
         const weight = Number(OD.enchants[node.I]?.weight) || 1;
@@ -672,9 +896,7 @@
         if (!acc.enchants.some(([id]) => id === node.I)) acc.enchants.push([node.I, level]);
         return;
       }
-      if (OD.items.includes(node.I)) {
-        acc.item = node.I;
-      }
+      if (OD.items.includes(node.I)) acc.item = node.I;
       return;
     }
     collectNode(node.L, acc);
@@ -701,6 +923,19 @@
     return `<span class="order-step-base">${escapeHTML(base)}</span><span class="order-step-dot" aria-hidden="true">·</span><span class="order-step-enchants">${parts.join('<span class="order-step-comma" aria-hidden="true">, </span>')}</span>`;
   }
 
+  function finalNodeMarkup(result) {
+    const levels = result?.item_obj?.levels || {};
+    const base = orderState.item === "book" ? ot("book") : itemLabel(orderState.item);
+    const parts = Object.entries(levels).map(([id, level]) => {
+      const enchantment = ENCH_BY_ID[id];
+      if (!enchantment) return "";
+      const label = `${displayName(enchantment)} ${ROMAN[level] || ""}`.trim();
+      return `<span class="order-step-enchant"><img class="order-step-icon" src="assets/enchant-icons/${escapeHTML(id)}.png" alt="" width="12" height="12" loading="lazy"><span>${escapeHTML(label)}</span></span>`;
+    }).filter(Boolean);
+    if (!parts.length) return `<span class="order-step-base">${escapeHTML(base)}</span>`;
+    return `<span class="order-step-base">${escapeHTML(base)}</span><span class="order-step-dot" aria-hidden="true">·</span>${parts.join('<span class="order-step-comma" aria-hidden="true">, </span>')}`;
+  }
+
   function renderResult() {
     const result = orderState.result;
     if (!result) return;
@@ -708,15 +943,18 @@
     els.placeholder.hidden = true;
     els.resultTitle.textContent = ot("resultTitle");
     els.totalLabel.textContent = ot("totalCost");
+    els.finalLabel.textContent = ot("finalItem");
     els.stepsTitle.textContent = ot("steps");
-
     if (result.special === "already") {
       els.time.textContent = ot("alreadyOptimal");
       els.totalValue.textContent = `${levelText(0)} · ${xpText(0)}`;
+      els.finalRow.hidden = true;
       els.stepsTitle.hidden = true;
       els.steps.innerHTML = "";
       return;
     }
+    els.finalRow.hidden = false;
+    els.finalValue.innerHTML = finalNodeMarkup(result);
 
     const levels = result.extra?.[0] || 0;
     const xpMin = result.item_obj?.x || 0;
@@ -799,7 +1037,7 @@
 
     hideNotice();
 
-    if (orderState.item === "book" && finalSelected.size === 1) {
+    if (orderState.item === "book" && finalSelected.size === 1 && !orderState.existing) {
       orderState.result = { special: "already" };
       orderState.elapsed = 0;
       renderResult();
@@ -808,13 +1046,17 @@
     }
 
     const mode = document.querySelector('input[name="order-mode"]:checked')?.value || "levels";
+    const start = orderState.existing
+      ? { levels: Array.from(orderState.existingLevels.entries()), work: orderState.priorWork }
+      : null;
     orderState.start = performance.now();
     setFormBusy(true);
     ensureWorker().postMessage({
       msg: "process",
       item: orderState.item,
       enchants: Array.from(finalSelected.entries()),
-      mode
+      mode,
+      start
     });
   }
 
@@ -825,7 +1067,17 @@
     els.kicker.textContent = ot("kicker");
     els.intro.textContent = ot("intro");
     els.itemLabel.textContent = ot("item");
+    els.bookForLabel.textContent = ot("bookFor");
+    els.existingLabel.textContent = orderState.item === "book" ? ot("startExistingBook") : ot("startExisting");
+    els.existingTitle.textContent = ot("existingEnchantments");
+    els.priorLabel.textContent = ot("priorWork");
+    if (els.priorWork) {
+      els.priorWork.options[0].textContent = ot("worstCase");
+      els.priorWork.options[1].textContent = ot("fresh");
+    }
+    els.bookFor.options[0] && (els.bookFor.options[0].textContent = ot("anyItem"));
     els.allowLabel.textContent = ot("allowIncompatible");
+    els.finalLabel.textContent = ot("finalItem");
     els.modeLabel.textContent = ot("optimize");
     els.modeLevels.textContent = ot("modeLevels");
     els.modePrior.textContent = ot("modePrior");
@@ -842,19 +1094,26 @@
     updateText();
     const previousItem = els.item.value;
     const previousSelection = readSelection();
+    const previousBookFor = orderState.bookFor;
     const allowed = allowedOrderItems();
     const nextItem = allowed.includes(previousItem)
       ? previousItem
       : (allowed.length === 1 ? allowed[0] : "");
     const changed = nextItem !== previousItem;
     renderItemOptions(nextItem);
-    if (changed) {
+    const targetChanged = changed || previousBookFor !== orderState.bookFor;
+    if (targetChanged) {
       orderState.selected = new Map();
+      orderState.existingLevels.clear();
       clearResult();
+      renderBookForOptions();
+      renderExistingRows();
       renderEnchantRows(new Map());
     } else if (nextItem) {
+      renderExistingRows();
       renderEnchantRows(previousSelection);
     } else {
+      renderExistingRows();
       renderEnchantRows(new Map());
       if (orderState.result) clearResult();
     }
@@ -876,11 +1135,22 @@
     orderState.showLoading = false;
     orderState.done = false;
     orderState.item = "";
+    orderState.bookFor = "";
+    orderState.existing = false;
+    orderState.existingLevels = new Map();
+    orderState.priorWork = 5;
     orderState.selected = new Map();
     orderState.result = null;
     orderState.elapsed = 0;
     els.form.inert = false;
     els.item.value = "";
+    els.bookFor.value = "";
+    els.bookForWrap.hidden = true;
+    els.existing.checked = false;
+    els.existingBuilder.hidden = true;
+    els.existingAdd.value = "";
+    els.existingList.innerHTML = "";
+    els.priorWork.value = "5";
     els.allow.checked = false;
     els.dialog.querySelectorAll('input[name="order-mode"]').forEach(input => {
       if (input.value === "levels") input.checked = true;
@@ -918,10 +1188,54 @@
   els.item.addEventListener("change", () => {
     if (orderState.busy) return;
     orderState.item = els.item.value;
+    orderState.bookFor = "";
+    orderState.existingLevels.clear();
     orderState.selected = new Map();
     clearResult();
+    renderBookForOptions();
+    els.existingLabel.textContent = els.item.value === "book" ? ot("startExistingBook") : ot("startExisting");
+    renderExistingRows();
     renderEnchantRows();
     if (!els.item.value) hideNotice();
+  });
+  els.bookFor.addEventListener("change", () => {
+    if (orderState.busy) return;
+    orderState.bookFor = els.bookFor.value;
+    orderState.existingLevels.clear();
+    orderState.selected = new Map();
+    clearResult();
+    renderExistingRows();
+    renderEnchantRows();
+  });
+  els.existing.addEventListener("change", () => {
+    if (orderState.busy) return;
+    orderState.existing = els.existing.checked;
+    clearResult();
+    renderExistingRows();
+    renderEnchantRows(new Map(orderState.selected));
+  });
+  els.existingAdd.addEventListener("change", () => {
+    if (orderState.busy) return;
+    if (els.existingAdd.value) addExistingEnchant(els.existingAdd.value);
+  });
+  els.existingList.addEventListener("change", event => {
+    if (orderState.busy) return;
+    const select = event.target.closest(".order-existing-level");
+    if (!select) return;
+    orderState.existingLevels.set(select.dataset.id, Number(select.value));
+    clearResult();
+    renderEnchantRows(new Map(orderState.selected));
+  });
+  els.existingList.addEventListener("click", event => {
+    if (orderState.busy) return;
+    const button = event.target.closest(".order-existing-remove");
+    if (!button) return;
+    removeExistingEnchant(button.dataset.id);
+  });
+  els.priorWork.addEventListener("change", () => {
+    if (orderState.busy) return;
+    orderState.priorWork = Number(els.priorWork.value) || 0;
+    clearResult();
   });
   els.allow.addEventListener("change", () => {
     if (orderState.busy) return;

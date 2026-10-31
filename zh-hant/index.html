@@ -4398,6 +4398,34 @@
       <section class="order-form" id="order-form">
         <label class="order-label" for="order-item" id="order-item-label">Item</label>
         <select class="order-select" id="order-item"></select>
+        <div class="order-book-for" id="order-book-for-wrap" hidden>
+          <label class="order-label" for="order-book-for" id="order-book-for-label">Book for</label>
+          <select class="order-select" id="order-book-for">
+            <option value="">Any item</option>
+          </select>
+        </div>
+        <label class="order-check order-existing-toggle">
+          <input type="checkbox" id="order-existing">
+          <span id="order-existing-label">Start with an already enchanted item</span>
+        </label>
+        <div class="order-existing-builder" id="order-existing-builder" hidden>
+          <div class="order-existing-head">
+            <span class="order-label" id="order-existing-title">Existing enchantments</span>
+          </div>
+          <select class="order-select order-existing-add" id="order-existing-add" aria-label="Add existing enchantment">
+            <option value="">Add existing enchantment…</option>
+          </select>
+          <div class="order-existing-list" id="order-existing-list"></div>
+          <label class="order-label order-prior-label" for="order-prior-work" id="order-prior-label">Prior work penalty</label>
+          <select class="order-select" id="order-prior-work">
+            <option value="5">Worst case — 31</option>
+            <option value="0">Fresh — 0</option>
+            <option value="1">1</option>
+            <option value="2">3</option>
+            <option value="3">7</option>
+            <option value="4">15</option>
+          </select>
+        </div>
         <label class="order-check">
           <input type="checkbox" id="order-allow-incompatible">
           <span id="order-allow-label">Allow incompatible enchantments</span>
@@ -4424,6 +4452,7 @@
         <h3 class="order-result-title" id="order-result-title">Optimal order</h3>
         <p class="order-time" id="order-time"></p>
         <p class="order-total"><span id="order-total-label">Total cost</span> <strong id="order-total-value"></strong></p>
+        <p class="order-final" id="order-final"><span class="order-final-label" id="order-final-label">Final item</span> <span id="order-final-value"></span></p>
         <h4 class="order-steps-title" id="order-steps-title">Steps</h4>
         <ol class="order-steps" id="order-steps"></ol>
       </section>
@@ -7525,6 +7554,7 @@
  */
 let ID_LIST = {};
 let ENCHANTMENT2WEIGHT = [];
+let ENCHANTMENT2MAX = [];
 const MAXIMUM_MERGE_LEVELS = 39;
 let ITEM_NAME;
 let results = {};
@@ -7540,16 +7570,19 @@ onmessage = event => {
             const enchant_data = enchants[enchant];
 
             const weight = enchant_data['weight'];
+            const maxLevel = enchant_data['levelMax'];
 
             ID_LIST[enchant] = id;
             ENCHANTMENT2WEIGHT[id] = weight;
+            ENCHANTMENT2MAX[id] = Number(maxLevel) || 1;
             id++;
         }
         Object.freeze(ENCHANTMENT2WEIGHT);
+        Object.freeze(ENCHANTMENT2MAX);
         Object.freeze(ID_LIST);
     }
     if (event.data.msg === 'process') {
-        process(event.data.item, event.data.enchants, event.data.mode);
+        process(event.data.item, event.data.enchants, event.data.mode, event.data.start);
     }
   } catch (error) {
     postMessage({ msg: 'error', error: String(error && error.message ? error.message : error) });
@@ -7557,67 +7590,140 @@ onmessage = event => {
 };
 
 
-function process(item, enchants, mode = 'levels') {
-    ITEM_NAME = item
-    Object.freeze(ITEM_NAME);
+function levelsValue(levels) {
+    let value = 0;
+    for (const [id, level] of Object.entries(levels)) {
+        const numericId = ID_LIST[id];
+        if (numericId === undefined) continue;
+        value += Number(level) * Number(ENCHANTMENT2WEIGHT[numericId] || 1);
+    }
+    return value;
+}
 
-    let enchant_objs = []
-    enchants.forEach(enchant => { // Creates objects of enchants
-        let id = ID_LIST[enchant[0]]
-        let e_obj = new item_obj('book', enchant[1] * ENCHANTMENT2WEIGHT[id], [id])
-        e_obj.c = {I: id, l: e_obj.l, w: e_obj.w}
-        enchant_objs.push(e_obj)
-    });
-    // Finds the most expensive enchant
-    let mostExpensive = enchant_objs.reduce((maxIndex, item, currentIndex, array) => {
+function baseNode(item) {
+    return {
+        I: item.i,
+        l: item.l,
+        w: item.w,
+        levels: { ...item.levels }
+    };
+}
+
+function mostExpensiveBook(books) {
+    return books.reduce((maxIndex, item, currentIndex, array) => {
         return item.l > array[maxIndex].l ? currentIndex : maxIndex;
     }, 0);
+}
 
-    let id;
-    if (ITEM_NAME === 'book') {
-        id = enchant_objs[mostExpensive].e[0]
-        item = new item_obj(id, enchant_objs[mostExpensive].l) // Makes the most expensive book the base
-        item.e.push(id)
-        enchant_objs.splice(mostExpensive, 1)
-        // Finds a new most expensive enchant
-        mostExpensive = enchant_objs.reduce((maxIndex, item, currentIndex, array) => {
-            return item.l > array[maxIndex].l ? currentIndex : maxIndex;
-        }, 0);
-    } else {
-        item = new item_obj('item')
+function process(targetItem, enchants, mode = 'levels', start = null) {
+    ITEM_NAME = targetItem;
+    Object.freeze(ITEM_NAME);
+
+    const startLevels = {};
+    (start && Array.isArray(start.levels) ? start.levels : []).forEach(([id, level]) => {
+        if (ID_LIST[id] !== undefined) startLevels[id] = Math.max(1, Number(level) || 1);
+    });
+    const startWork = start ? Math.max(0, Number(start.work) || 0) : 0;
+
+    // New leaves represent target levels. If the starting item already has an
+    // equal or higher level, that book would be redundant, so omit it.
+    let enchant_objs = [];
+    enchants.forEach(enchant => {
+        const id = enchant[0];
+        const level = Number(enchant[1]) || 1;
+        const numericId = ID_LIST[id];
+        if (numericId === undefined) return;
+        const currentLevel = startLevels[id] || 0;
+        const maxLevel = Number(ENCHANTMENT2MAX[numericId]) || 1;
+        if (level < currentLevel) return;
+        if (level === currentLevel && currentLevel >= maxLevel) return;
+        const levels = { [id]: level };
+        const e_obj = new item_obj('book', level * ENCHANTMENT2WEIGHT[numericId], [numericId], levels);
+        e_obj.c = baseNode(e_obj);
+        enchant_objs.push(e_obj);
+    });
+
+    if (enchant_objs.length === 0) {
+        postMessage({
+            msg: 'complete',
+            item_obj: null,
+            instructions: [],
+            extra: [0, 0],
+            special: 'already',
+            enchants
+        });
+        return;
     }
-    let merged_item = new MergeEnchants(item, enchant_objs[mostExpensive]) // Merges the most expensive enchant with the item
-    merged_item.c.L = {I: item.i, l: 0, w: 0}
-    enchant_objs.splice(mostExpensive, 1)
 
-    let all_objs = enchant_objs.concat(merged_item)
+    let item;
+    if (ITEM_NAME === 'book') {
+        if (Object.keys(startLevels).length) {
+            item = new item_obj(
+                'book',
+                levelsValue(startLevels),
+                Object.keys(startLevels).map(id => ID_LIST[id]),
+                { ...startLevels },
+                startWork
+            );
+            item.c = baseNode(item);
+        } else {
+            // Keep the original zero-state behavior: the most valuable book
+            // starts the merge tree.
+            const mostExpensive = mostExpensiveBook(enchant_objs);
+            item = enchant_objs.splice(mostExpensive, 1)[0];
+            item.c = baseNode(item);
+        }
+    } else {
+        item = new item_obj(
+            'item',
+            levelsValue(startLevels),
+            Object.keys(startLevels).map(id => ID_LIST[id]),
+            { ...startLevels },
+            startWork
+        );
+        item.c = baseNode(item);
+        if (item.i === 'item') item.c.I = ITEM_NAME;
+    }
+
+    if (enchant_objs.length === 0) {
+        postMessage({
+            msg: 'complete',
+            item_obj: null,
+            instructions: [],
+            extra: [0, 0],
+            special: 'already',
+            enchants
+        });
+        return;
+    }
+
+    const firstBook = enchant_objs[mostExpensiveBook(enchant_objs)];
+    let merged_item = new MergeEnchants(item, firstBook);
+    merged_item.c.L = item.c;
+    enchant_objs.splice(enchant_objs.indexOf(firstBook), 1);
+
+    let all_objs = enchant_objs.concat(merged_item);
     let cheapest_items = cheapestItemsFromList(all_objs);
 
     let cheapest_cost = Infinity;
     let cheapest_key;
     for (const key in cheapest_items) {
-        const item = cheapest_items[key];
-        let item_cost;
-
-        if (mode === 'levels') {
-            item_cost = item.x;
-        } else {
-            item_cost = item.w;
-        }
+        const candidate = cheapest_items[key];
+        const item_cost = mode === 'levels' ? candidate.x : candidate.w;
         if (item_cost < cheapest_cost) {
             cheapest_cost = item_cost;
             cheapest_key = key;
         }
     }
-    const cheapest_item = cheapest_items[cheapest_key]
+    const cheapest_item = cheapest_items[cheapest_key];
 
     let instructions = getInstructions(cheapest_item.c);
 
-    let max_levels = 0
+    let max_levels = 0;
     instructions.forEach(key => {
-        max_levels += key[2]
+        max_levels += key[2];
     });
-    let max_xp = experience(max_levels)
+    let max_xp = experience(max_levels);
 
     postMessage({
         msg: 'complete',
@@ -7627,9 +7733,8 @@ function process(item, enchants, mode = 'levels') {
         enchants: enchants
     });
 
-    results = {}
+    results = {};
 }
-
 
 function getInstructions(comb) {
     let instructions = [];
@@ -7642,21 +7747,9 @@ function getInstructions(comb) {
                     instructions.push(single_instruction);
                 })
             }
-            let id;
-            if (Number.isInteger(comb[key].I)) {
-                id = comb[key].I
-                comb[key].I = Object.keys(ID_LIST).find(key => ID_LIST[key] === id);
-            } else if (typeof (comb[key].I) === 'string' && !Object.keys(ID_LIST).includes(comb[key].I)) {
-                comb[key].I = ITEM_NAME
-            }
         }
     }
-    let merge_cost;
-    if (Number.isInteger(comb.R.v)) {
-        merge_cost = comb.R.v + 2 ** comb.L.w - 1 + 2 ** comb.R.w - 1
-    } else {
-        merge_cost = comb.R.l + 2 ** comb.L.w - 1 + 2 ** comb.R.w - 1
-    }
+    let merge_cost = comb.l;
     let work = Math.max(comb.L.w, comb.R.w) + 1
     const single_instruction = [comb.L, comb.R, merge_cost, experience(merge_cost), 2 ** work - 1];
     instructions.push(single_instruction);
@@ -7906,11 +7999,12 @@ function cheapestItemsFromDictionaries2(left_work2item, right_work2item) {
 
 
 class item_obj {
-    constructor(name, value = 0, id = []) {
+    constructor(name, value = 0, id = [], levels = {}, work = 0) {
         this.i = name // item namespace: 'book' or 'item'
         this.e = id // enchant id
+        this.levels = levels // enchant id -> final level
         this.c = {} // stores instructions
-        this.w = 0 // work
+        this.w = work // prior anvil-use count
         this.l = value // value, in MergeEnchants merge_cost
         this.x = 0 // total xp
     }
@@ -7920,16 +8014,35 @@ class item_obj {
 class MergeEnchants extends item_obj {
     // In MergeEnchants c.v: value and c.l: merge_cost (both for instructions), (this.l: value)
     constructor(left, right) {
-        const merge_cost = right.l + 2 ** left.w - 1 + 2 ** right.w - 1
+        const levels = { ...left.levels };
+        for (const [id, level] of Object.entries(right.levels)) {
+            const numericId = ID_LIST[id];
+            const maxLevel = numericId === undefined ? 1 : (Number(ENCHANTMENT2MAX[numericId]) || 1);
+            const currentLevel = Number(levels[id] || 0);
+            const rightLevel = Number(level) || 0;
+            let finalLevel = Math.max(currentLevel, rightLevel);
+            if (rightLevel === currentLevel && currentLevel < maxLevel) {
+                finalLevel = currentLevel + 1;
+            }
+            levels[id] = finalLevel;
+        }
+        // Java uses the resulting final level for the sacrifice's enchantment
+        // cost, not merely the sacrifice's own level.
+        let enchant_cost = 0;
+        for (const id of Object.keys(right.levels)) {
+            const numericId = ID_LIST[id];
+            if (numericId === undefined) continue;
+            enchant_cost += (levels[id] || 0) * Number(ENCHANTMENT2WEIGHT[numericId] || 1);
+        }
+        const merge_cost = enchant_cost + 2 ** left.w - 1 + 2 ** right.w - 1;
         if (merge_cost > MAXIMUM_MERGE_LEVELS) {
             throw new MergeLevelsTooExpensiveError();
         }
-        let new_value = left.l + right.l
-        super(left.i, new_value)
-        this.e = left.e.concat(right.e) // list of enchants
+        const new_value = levelsValue(levels);
+        super(left.i, new_value, Object.keys(levels).map(id => ID_LIST[id]), levels);
         this.w = Math.max(left.w, right.w) + 1 // new work
         this.x = left.x + right.x + experience(merge_cost) // total xp
-        this.c = {L: left.c, R: right.c, l: merge_cost, w: this.w, v: this.l} // instructions
+        this.c = {L: left.c, R: right.c, l: merge_cost, w: this.w, v: this.l, levels: this.levels} // instructions
     }
 }
 
