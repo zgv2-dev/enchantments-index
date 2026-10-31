@@ -43,6 +43,6 @@ Then visit <http://localhost:8000>.
 ## SEO and deployment
 
 - Includes canonical metadata, Open Graph/Twitter cards, a 1200×630 social image, JSON-LD (`WebSite`, `WebApplication`, and a 43-item `ItemList`), `robots.txt`, `sitemap.xml`, a web manifest, and a no-JavaScript fallback listing every enchantment.
-- Metadata currently targets the default GitHub Pages URL: `https://zgv2-dev.github.io/enchantments-index/`.
-- Enable GitHub Pages from the `main` branch root. If deploying to a custom domain, update the canonical URL, `og:url`, `og:image`, `sitemap.xml`, and `robots.txt`.
-- For GitHub project pages, `robots.txt` is served under the project path rather than the domain root; submit `sitemap.xml` in Google Search Console, or use a custom domain for root-level robots discovery.
+- Metadata currently targets the live custom domain: `https://enchantments.mc.zgv2.dev/`.
+- If the site moves to another domain, update the canonical URL, `og:url`, `og:image`, `sitemap.xml`, and `robots.txt`.
+- `robots.txt` and `sitemap.xml` are served from the custom domain root.
