@@ -669,7 +669,7 @@
   .shapeshift-ad {
     display: block;
     margin: 0;
-    padding: 13px;
+    padding: 0;
     overflow: hidden;
     border: 1px solid var(--lab-line);
     border-top: 0;
@@ -679,6 +679,19 @@
       var(--lab-paper);
     color: var(--lab-ink);
     box-shadow: none;
+  }
+
+  .shapeshift-ad-link {
+    display: block;
+    padding: 13px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .shapeshift-ad-link:focus-visible {
+    outline: 2px solid var(--lab-blue);
+    outline-offset: -3px;
+    border-radius: 15px;
   }
 
   .shapeshift-ad-copy {
@@ -774,7 +787,7 @@
     text-decoration: none;
   }
 
-  .shapeshift-ad-cta:hover {
+  .shapeshift-ad-link:hover .shapeshift-ad-cta {
     color: var(--lab-ink);
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -785,13 +798,8 @@
     height: 10px;
   }
 
-  .shapeshift-ad-cta:focus-visible {
-    outline: 2px solid var(--lab-blue);
-    outline-offset: 3px;
-  }
-
   @media (max-width: 560px) {
-    .shapeshift-ad {
+    .shapeshift-ad-link {
       padding: 12px;
     }
 
@@ -3234,45 +3242,6 @@
     gap: 8px;
   }
 
-  .header-shapeshift {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    padding: 0 2px;
-    color: var(--lab-muted);
-    font-family: var(--lab-ui);
-    font-size: 9px;
-    font-weight: 600;
-    letter-spacing: .01em;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .header-shapeshift:hover {
-    color: var(--lab-blue);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .header-shapeshift svg {
-    width: 9px;
-    height: 9px;
-    flex: 0 0 auto;
-  }
-
-  .header-shapeshift:focus-visible,
-  .footer-shapeshift:focus-visible {
-    outline: 2px solid var(--lab-blue);
-    outline-offset: 2px;
-    border-radius: 3px;
-  }
-
-  @media (max-width: 1080px) {
-    .header-shapeshift {
-      display: none;
-    }
-  }
-
   .footer {
     flex-wrap: wrap;
   }
@@ -3306,30 +3275,6 @@
     outline: 2px solid var(--lab-blue);
     outline-offset: 2px;
     border-radius: 3px;
-  }
-
-  .footer-shapeshift {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    color: var(--lab-blue);
-    font-family: var(--lab-ui);
-    font-size: 9.5px;
-    font-weight: 600;
-    letter-spacing: .01em;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-
-  .footer-shapeshift:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .footer-shapeshift svg {
-    width: 9px;
-    height: 9px;
-    flex: 0 0 auto;
   }
 
   .lang-switch {
@@ -4308,10 +4253,6 @@
       </div>
     </div>
     <div class="header-controls">
-      <a class="header-shapeshift" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener" aria-label="Shapeshift — Minecraft shape generator" title="Shapeshift — Minecraft shape generator">
-        Shapeshift
-        <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-      </a>
       <div class="language-control">
         <svg class="language-globe" aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2">
           <circle cx="8" cy="8" r="5.5"/>
@@ -4407,6 +4348,7 @@
         </div>
         <div class="detail-body" id="detail-body" aria-live="polite"></div>
     <aside class="shapeshift-ad" aria-labelledby="shapeshift-ad-title">
+      <a class="shapeshift-ad-link" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener">
       <div class="shapeshift-ad-copy">
         <p class="shapeshift-ad-eyebrow" id="shapeshift-ad-eyebrow">Self promo</p>
         <p class="shapeshift-ad-kicker">
@@ -4420,21 +4362,18 @@
           <span id="shapeshift-ad-chip-1">Half-slab curves</span>
           <span id="shapeshift-ad-chip-2">Schematic export</span>
         </div>
-        <a class="shapeshift-ad-cta" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener">
+        <span class="shapeshift-ad-cta">
           <span id="shapeshift-ad-cta">Explore Shapeshift</span>
           <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-        </a>
+        </span>
       </div>
+      </a>
     </aside>
       </aside>
   </main>
 
   <footer class="footer">
     <span class="footer-credit">@ 2026 Enchantments index by ZGV2</span>
-    <a class="footer-shapeshift" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener" aria-label="Shapeshift — Minecraft shape generator" title="Shapeshift — Minecraft shape generator">
-      Shapeshift
-      <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-    </a>
     <a class="footer-report" id="report-issue" href="https://github.com/zgv2-dev/enchantments-index/issues/new" target="_blank" rel="noopener" aria-label="Report an issue" title="Report an issue">
       <span id="report-issue-label">Report an issue</span>
       <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
