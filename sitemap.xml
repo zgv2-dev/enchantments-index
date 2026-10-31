@@ -1,9 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://enchantments.mc.zgv2.dev/</loc>
     <lastmod>2026-10-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/de/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/fr/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/it/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/es/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/uk/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/zh-hans/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/zh-hant/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
+  </url>
+  <url>
+    <loc>https://enchantments.mc.zgv2.dev/ja/</loc>
+    <lastmod>2026-10-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://enchantments.mc.zgv2.dev/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://enchantments.mc.zgv2.dev/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://enchantments.mc.zgv2.dev/fr/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://enchantments.mc.zgv2.dev/it/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://enchantments.mc.zgv2.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://enchantments.mc.zgv2.dev/uk/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://enchantments.mc.zgv2.dev/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://enchantments.mc.zgv2.dev/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://enchantments.mc.zgv2.dev/ja/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://enchantments.mc.zgv2.dev/"/>
   </url>
 </urlset>

@@ -1,16 +1,16 @@
 # The Enchantment Codex
 
-A single-page, searchable Minecraft enchantment codex with a light green field-lab interface, a forest-green night mode, and blocky in-game-inspired details.
+A static, searchable Minecraft enchantment codex with nine crawlable locale routes, a light green field-lab interface, a forest-green night mode, and blocky in-game-inspired details.
 
 ## Run it
 
-Open `index.html` directly in a browser, or serve the folder:
+Serve the folder so the root-relative asset paths and locale routes resolve:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit <http://localhost:8000>.
+Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 
 ## Features
 
@@ -22,8 +22,8 @@ Then visit <http://localhost:8000>.
 - Sort alphabetically or by max level
 - Compatible items, conflicts, added-in versions, and treasure/curse notes
 - Full-site localization for English, Ukrainian, Simplified Chinese, Traditional Chinese, German, French, Italian, Spanish, and Japanese (official names; wiki-sourced descriptions)
-- Header language selector; search and sorting follow the selected language
-- On first visit the language follows the browser when supported; manual choices take precedence
+- Header language selector navigates between crawlable locale URLs; search and sorting follow the selected language
+- Nine locale routes: `/`, `/de/`, `/fr/`, `/it/`, `/es/`, `/uk/`, `/zh-hans/`, `/zh-hant/`, and `/ja/`
 - Unique per-enchantment book icons from Even Better Enchants, shown in cards, details, and the optimizer
 - Built-in anvil order optimizer adapted from [iamcal/enchant-order](https://github.com/iamcal/enchant-order)
 - Order optimizer limits item choices to the active Armor/Weapons/Tools/Ranged/Trident/Fishing filter
@@ -44,7 +44,14 @@ Then visit <http://localhost:8000>.
 
 ## SEO and deployment
 
-- Includes canonical metadata, Open Graph/Twitter cards, a 1200×630 social image, JSON-LD (`WebSite`, `WebApplication`, and a 43-item `ItemList`), `robots.txt`, `sitemap.xml`, a web manifest, and a no-JavaScript fallback listing every enchantment.
-- Metadata currently targets the live custom domain: `https://enchantments.mc.zgv2.dev/`.
-- If the site moves to another domain, update the canonical URL, `og:url`, `og:image`, `sitemap.xml`, and `robots.txt`.
-- `robots.txt` and `sitemap.xml` are served from the custom domain root.
+- Nine crawlable locale routes: `/` (English, `x-default`), `/de/`, `/fr/`, `/it/`, `/es/`, `/uk/`, `/zh-hans/`, `/zh-hant/`, and `/ja/`.
+- Each route has a localized `<html lang>`, title, description, Open Graph/Twitter metadata, JSON-LD, and no-JavaScript fallback listing all 43 enchantments.
+- Every page has a reciprocal `hreflang` cluster, a self-referencing canonical URL, and localized `og:locale`; `/` is `x-default`.
+- `sitemap.xml` lists all nine routes with `xhtml:link` hreflang alternates. `robots.txt` points to it from the domain root.
+- The language selector navigates to the matching locale URL. The URL determines the page language; there are no forced browser-language redirects.
+- The locale pages are generated from the main `index.html` template:
+  ```sh
+  node scripts/build-locales.mjs
+  ```
+  Re-run this after changing enchantment data, UI translations, or fallback copy. The generated locale folders are committed.
+- Metadata currently targets the live custom domain: `https://enchantments.mc.zgv2.dev/`. If the domain changes, update `SITE` in `scripts/build-locales.mjs`, rerun the generator, and update `robots.txt`.
