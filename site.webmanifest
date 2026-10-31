@@ -1,6 +1,6 @@
 {
-  "name": "The Enchantment Codex",
-  "short_name": "Enchantment Codex",
+  "name": "EnchantMC",
+  "short_name": "EnchantMC",
   "description": "Searchable Minecraft Java 26.3 enchantment list with max levels, compatible items, conflicts, and an anvil order optimizer.",
   "start_url": "./",
   "scope": "./",

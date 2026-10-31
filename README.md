@@ -1,4 +1,4 @@
-# The Enchantment Codex
+# EnchantMC
 
 A static, searchable Minecraft enchantment codex with nine crawlable locale routes, a light green field-lab interface, a forest-green night mode, and blocky in-game-inspired details.
 
@@ -17,7 +17,7 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - All 43 vanilla **Java Edition 26.3** enchantments, including Lunge
 - Instant search by enchantment name
 - Shareable per-enchantment links, e.g. `#mending`, including direct links into the mobile detail drawer
-- A fully clickable **From the same workshop** feature card for [Shapeshift](https://shapeshift.mc.zgv2.dev/), the Minecraft shape generator by ZGV2
+- A fully clickable **From the same workshop** feature card for [ShapeShiftMC](https://shapeshift.mc.zgv2.dev/), the Minecraft shape generator by ZGV2
 - Filter by category or max level
 - Sort alphabetically or by max level
 - Compatible items, conflicts, added-in versions, and treasure/curse notes

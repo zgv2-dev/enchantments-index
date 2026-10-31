@@ -214,7 +214,7 @@ function buildFallback(locale) {
     <h2 class="seo-fallback-title" id="seo-fallback-title">${esc(ui.title)}</h2>
     <p>${esc(FALLBACK_INTRO[locale.id] || FALLBACK_INTRO.en)}</p>
     <p class="seo-langs"><strong>${esc(ui.language)}:</strong> ${languages}</p>
-    <p>Shapeshift: <a href="https://shapeshift.mc.zgv2.dev/">Minecraft shape generator</a>.</p>
+    <p>ShapeShiftMC: <a href="https://shapeshift.mc.zgv2.dev/">Minecraft shape generator</a>.</p>
     <p><a href="${ISSUES_URL}">${esc(ui.reportIssue)}</a></p>
     <ul>
       ${items}
