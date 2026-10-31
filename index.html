@@ -648,13 +648,49 @@
     font-weight: 400;
   }
 
+  .detail-column {
+    min-width: 0;
+  }
+
+  @media (min-width: 1081px) {
+    .detail-column {
+      position: sticky;
+      top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-self: start;
+      height: calc(100vh - 102px);
+    }
+
+    .detail-column .detail-panel {
+      position: static;
+      flex: 1 1 auto;
+      min-height: 0;
+      max-height: none;
+      align-self: auto;
+      overflow-y: auto;
+    }
+
+    .detail-column .shapeshift-ad {
+      flex: 0 0 auto;
+    }
+  }
+
+  @media (max-width: 1080px) {
+    .detail-column {
+      display: contents;
+    }
+
+    .shapeshift-ad {
+      margin: 0;
+    }
+  }
+
   .shapeshift-ad {
-    display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(260px, .92fr);
-    gap: 18px;
-    align-items: stretch;
-    margin: 0 0 16px;
-    padding: 16px;
+    display: block;
+    margin: 0;
+    padding: 13px;
     overflow: hidden;
     border: 1px solid var(--lab-line);
     border-radius: 14px;
@@ -697,7 +733,7 @@
     margin: 0 0 6px;
     color: var(--lab-ink);
     font-family: var(--lab-ui);
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 750;
     line-height: 1.12;
     letter-spacing: -.02em;
@@ -705,10 +741,10 @@
 
   .shapeshift-ad-body {
     max-width: 56ch;
-    margin: 0 0 10px;
+    margin: 0 0 9px;
     color: var(--lab-muted);
     font-family: var(--lab-ui);
-    font-size: 10px;
+    font-size: 9.5px;
     line-height: 1.5;
   }
 
@@ -716,10 +752,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: var(--lab-faint);
     font-family: var(--lab-ui);
-    font-size: 9px;
+    font-size: 8px;
     line-height: 1.4;
   }
 
@@ -729,7 +765,7 @@
 
   .shapeshift-ad-chips span + span::before {
     content: "·";
-    padding: 0 6px;
+    padding: 0 5px;
     color: var(--lab-line);
   }
 
@@ -737,11 +773,11 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    margin-top: auto;
-    padding: 4px 0;
+    margin-top: 8px;
+    padding: 3px 0;
     color: var(--lab-blue);
     font-family: var(--lab-ui);
-    font-size: 10px;
+    font-size: 9.5px;
     font-weight: 600;
     line-height: 1.3;
     text-decoration: none;
@@ -758,52 +794,18 @@
     height: 10px;
   }
 
-  .shapeshift-ad-cta:focus-visible,
-  .shapeshift-ad-visual:focus-visible {
+  .shapeshift-ad-cta:focus-visible {
     outline: 2px solid var(--lab-blue);
     outline-offset: 3px;
   }
 
-  .shapeshift-ad-visual {
-    display: block;
-    min-width: 0;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border: 1px solid var(--lab-line);
-    border-radius: 9px;
-    background: #08100a;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, .08);
-  }
-
-  .shapeshift-ad-visual img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  @media (max-width: 800px) {
-    .shapeshift-ad {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    .shapeshift-ad-visual {
-      aspect-ratio: 16 / 7;
-    }
-  }
-
   @media (max-width: 560px) {
     .shapeshift-ad {
-      padding: 14px;
-      gap: 0;
+      padding: 12px;
     }
 
     .shapeshift-ad h3 {
-      font-size: 17px;
-    }
-
-    .shapeshift-ad-visual {
-      display: none;
+      font-size: 16px;
     }
   }
 
@@ -4363,39 +4365,37 @@
         </div>
       </div>
 
-      <aside class="shapeshift-ad" aria-labelledby="shapeshift-ad-title">
-        <div class="shapeshift-ad-copy">
-          <p class="shapeshift-ad-kicker">
-            <img src="assets/shapeshift-icon.svg" alt="" width="16" height="16">
-            <span id="shapeshift-ad-kicker">From the same workshop</span>
-          </p>
-          <h3 id="shapeshift-ad-title">Minecraft shapes that don't look like boxes.</h3>
-          <p class="shapeshift-ad-body" id="shapeshift-ad-body">Shapeshift is my other Minecraft tool: 37 parametric shapes with half-slab curves, real 26.3 textures, 3D previews and layer-by-layer blueprints. Export straight to Litematica, WorldEdit or a structure block.</p>
-          <div class="shapeshift-ad-chips" aria-hidden="true">
-            <span id="shapeshift-ad-chip-0">37 shapes</span>
-            <span id="shapeshift-ad-chip-1">Half-slab curves</span>
-            <span id="shapeshift-ad-chip-2">Schematic export</span>
-          </div>
-          <a class="shapeshift-ad-cta" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener">
-            <span id="shapeshift-ad-cta">Explore Shapeshift</span>
-            <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
-          </a>
-        </div>
-        <a class="shapeshift-ad-visual" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1">
-          <img src="assets/shapeshift-preview.webp" alt="" width="960" height="600" loading="lazy" decoding="async">
-        </a>
-      </aside>
-
       <div class="ench-grid" id="ench-grid"></div>
       </section>
     </div>
 
-    <aside class="detail-panel" id="detail-panel" aria-label="Selected enchantment details">
-      <div class="detail-topbar">
-        <button class="detail-close" id="detail-close" type="button" aria-label="Close details">×</button>
+    <div class="detail-column">
+      <aside class="detail-panel" id="detail-panel" aria-label="Selected enchantment details">
+        <div class="detail-topbar">
+          <button class="detail-close" id="detail-close" type="button" aria-label="Close details">×</button>
+        </div>
+        <div class="detail-body" id="detail-body" aria-live="polite"></div>
+      </aside>
+    <aside class="shapeshift-ad" aria-labelledby="shapeshift-ad-title">
+      <div class="shapeshift-ad-copy">
+        <p class="shapeshift-ad-kicker">
+          <img src="assets/shapeshift-icon.svg" alt="" width="16" height="16">
+          <span id="shapeshift-ad-kicker">From the same workshop</span>
+        </p>
+        <h3 id="shapeshift-ad-title">Minecraft shapes that don't look like boxes.</h3>
+        <p class="shapeshift-ad-body" id="shapeshift-ad-body">Shapeshift is my other Minecraft tool: 37 parametric shapes with half-slab curves, real 26.3 textures, 3D previews and layer-by-layer blueprints. Export straight to Litematica, WorldEdit or a structure block.</p>
+        <div class="shapeshift-ad-chips" aria-hidden="true">
+          <span id="shapeshift-ad-chip-0">37 shapes</span>
+          <span id="shapeshift-ad-chip-1">Half-slab curves</span>
+          <span id="shapeshift-ad-chip-2">Schematic export</span>
+        </div>
+        <a class="shapeshift-ad-cta" href="https://shapeshift.mc.zgv2.dev/" target="_blank" rel="noopener">
+          <span id="shapeshift-ad-cta">Explore Shapeshift</span>
+          <svg aria-hidden="true" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 2h5v5M14 2 7 9" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+        </a>
       </div>
-      <div class="detail-body" id="detail-body" aria-live="polite"></div>
     </aside>
+    </div>
   </main>
 
   <footer class="footer">
