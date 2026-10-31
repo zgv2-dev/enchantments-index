@@ -42,7 +42,7 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - The anvil order optimizer algorithm and data are adapted from iamcal/enchant-order, © 2021 Cal Henderson, under the MIT License. The upstream license is included at `assets/enchant-order-LICENSE.txt`.
 - Enchantment icons are from Even Better Enchants by Mythitorium, based on Better Enchant Books by Yomna. The Modrinth project lists Apache-2.0; the pack's bundled README says all rights reserved. See `assets/even-better-enchants-NOTICE.txt` and `assets/even-better-enchants-LICENSE.txt`; verify the applicable terms before commercial use.
 - Typeface: [Monocraft](https://github.com/IdreesInc/Monocraft) by Idrees Inc., licensed under the SIL Open Font License. The license is included at `assets/OFL.txt`.
-- Category tab icons use Minecraft Java 26.3 item and block textures. Minecraft assets are © Mojang/Microsoft and are used here in this unofficial fan project.
+- Category tab icons use Minecraft Java 26.3 item and block textures; Utility uses a matching anvil glyph. Minecraft assets are © Mojang/Microsoft and are used here in this unofficial fan project.
 
 ## SEO and deployment
 
