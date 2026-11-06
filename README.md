@@ -52,7 +52,7 @@ Then visit <http://localhost:8000> or <http://localhost:8000/de/>.
 - Nine crawlable locale routes: `/` (English, `x-default`), `/de/`, `/fr/`, `/it/`, `/es/`, `/uk/`, `/zh-hans/`, `/zh-hant/`, and `/ja/`.
 - Each route has a localized `<html lang>`, title, description, Open Graph/Twitter metadata, JSON-LD, and no-JavaScript fallback listing all 43 enchantments.
 - Every page has a reciprocal `hreflang` cluster, a self-referencing canonical URL, and localized `og:locale`; `/` is `x-default`.
-- `sitemap.xml` lists all nine routes with `xhtml:link` hreflang alternates. `robots.txt` points to it from the domain root.
+- `sitemap.xml` lists all nine routes as plain XML; the reciprocal hreflang cluster lives in each page’s `<head>`. `robots.txt` points to the sitemap from the domain root.
 - The language selector navigates to the matching locale URL. The URL determines the page language; there are no forced browser-language redirects.
 - `vercel.json` permanently redirects non-slash locale paths to their canonical trailing-slash URLs.
 - The locale pages are generated from the main `index.html` template:

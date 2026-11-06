@@ -267,14 +267,12 @@ for (const { locale, html } of pages) {
 }
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${LOCALES.map(locale => `  <url>
     <loc>${pageUrl(locale)}</loc>
     <lastmod>${TODAY}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>${locale.id === "en" ? "1.0" : "0.8"}</priority>
-${LOCALES.map(item => `    <xhtml:link rel="alternate" hreflang="${item.html}" href="${pageUrl(item)}"/>`).join("\n")}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/"/>
   </url>`).join("\n")}
 </urlset>
 `;
